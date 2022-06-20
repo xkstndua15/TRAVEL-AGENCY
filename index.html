@@ -4,10 +4,155 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>TRAVEL AGENCY</title>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="main.js"></script>
+    <script src="https://kit.fontawesome.com/027216c328.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
-    hello
+    <header id="header">
+        <div class="inner">
+            <h1><a href="index.html">TRAVEL AGENCY</a></h1>
+            <nav class="menuWeb">
+                <ul id="gnb">
+                    <li><a href="#">DEPARTMENT</a></li>
+                    <li><a href="#">YOUTUBE</a></li>
+                    <li><a href="#">COMMUNITY</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="#">LOCATION</a></li>
+                </ul>
+
+                <div class="util">
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Join</a></li>
+                        <li><a href="#">SiteMap</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <figure id="visual">
+            <div class="inner">
+                <h2>it's time for great</h2>
+                <h3>Adventure</h3>
+                <a href="#">start now</a>
+                <div class="wrap">
+                    <img src="img/visual/visual.jpeg" alt="비주얼 배경화면">
+                    <img src="img/visual/ink.png" alt="비주얼 배경화면 틀">
+                    <img src="img/visual/ballon.png" alt="비주얼 배경화면 풍선">
+                </div>
+            </div>
+        </figure>
+
+        <section id="news">
+            <div class="inner">
+                <div class="wrap">
+                    <article>
+                        <i class="fa-solid fa-earth-asia"></i>
+                        <h2>Holiday Types</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, consequatur expedita vel repellat beatae enim.</p>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-suitcase-rolling"></i>
+                        <h2>Travel Guides</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, consequatur expedita vel repellat beatae enim.</p>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-mountain-sun"></i>
+                        <h2>Extreme Tours</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, consequatur expedita vel repellat beatae enim.</p>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-user-astronaut"></i>
+                        <h2>Dream Vacation</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, consequatur expedita vel repellat beatae enim.</p>
+                    </article>
+                </div>
+            </div>                        
+        </section>
+
+        <section id="fix_banner">
+            <div class="inner">
+                <h2>Hot Destinations</h2>
+                <p>The first place to look for environmentally friendly holidays</p>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <div class="inner">
+                <div class="wrap">
+                    <article>
+                        <div class="img">
+                            <img src="img/gallery/tower-bridge.jpg" alt="갤러리 다리 사진">
+                        </div>
+                        <h2>£300+ Discounts</h2>
+                        <p>From ancient cultures to amazing landscapes, find the very best discounts on offer Lorem ipsum dolor sit amet consectetur adipisicing elit. A, error!</p>
+                    </article>
+                    <article>
+                        <div class="img">
+                            <img src="img/gallery/palace.jpg" alt="갤러리 궁전 사진">
+                        </div>
+                        <h2>Spain Holidays</h2>
+                        <p>Soaring mountains, sun-soaked coasts, Moorish heritage and moreish food Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, est?</p>
+                    </article>
+                    <article>
+                        <div class="img">
+                            <img src="img/gallery/mountain-biking.jpg" alt="갤러리 산 사진">
+                        </div>
+                        <h2>Cycling Holidays</h2>
+                        <p>Reawaken that long lost childhood sense of freedom or challenge yourself to an adventure Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, maiores!</p>
+                    </article>
+                    <article>
+                        <div class="img">
+                            <img src="img/gallery/desert.jpg" alt="갤러리 사막 사진">
+                        </div>
+                        <h2>Africa Holidays</h2>
+                        <p>Exotic souks, ancient wonders, unique wildlife and huge sand dunes in seemingly endless deserts Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, reprehenderit!</p>
+                    </article>
+                    <a href="#">show more</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="swipers">
+            <div class="inner">
+                <div class="wrap">
+                    <div class="swiper mySwiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="basic_banner">
+
+        </section>
+    </main>
+
+    <footer id="footer">
+
+    </footer>
+
 </body>
 </html>

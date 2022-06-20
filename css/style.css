@@ -1,3 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  position: absolute;
+  top: -99999px;
+  opacity: 0;
+}
+
+.wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#header {
+  width: 100%;
+}
+#header .inner {
+  width: 1180px;
+  height: 120px;
+  margin: 0px auto;
+  position: relative;
+}
+#header .inner h1 {
+  position: absolute;
+  bottom: 10px;
+}
+#header .inner h1 a {
+  font: normal 25px/1 "roboto";
+  color: #000;
+}
+#header .inner #gnb {
+  position: absolute;
+  bottom: 5px;
+  right: 0px;
+}
+#header .inner #gnb li {
+  float: left;
+  margin-right: 20px;
+}
+#header .inner #gnb li:last-of-type {
+  margin-right: 0px;
+}
+#header .inner #gnb li a {
+  display: block;
+  width: 120px;
+  height: 40px;
+  font: bold 14px/40px "open sans";
+  color: #000;
+  text-align: center;
+  transition: 0.3s;
+  border-bottom: 2px solid transparent;
+}
+#header .inner #gnb li a:hover {
+  border-bottom: 2px solid orangered;
+}
+#header .inner .util {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#header .inner .util li {
+  float: left;
+  margin-right: 20px;
+}
+#header .inner .util li a {
+  font: 12px/1 "open sans";
+  color: #000;
+}
+
+#visual {
+  width: 100%;
+}
+#visual .inner {
+  width: 1180px;
+  height: 85vh;
+  margin: 0px auto;
+  position: relative;
+}
+#visual .inner h2 {
+  font: 23px/1 "roboto";
+  color: #fff;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%);
+}
+#visual .inner h3 {
+  font: bold 100px/1 "open sans";
+  color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%);
+}
+#visual .inner a {
+  display: block;
+  width: 150px;
+  height: 50px;
+  border: 2px solid #fff;
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%);
+  font: bold 16px/45px "open sans";
+  color: #fff;
+  text-align: center;
+  transition: 0.5s;
+}
+#visual .inner a:hover {
+  border: 2px solid #777;
+}
+#visual .inner .wrap {
+  width: 100%;
+}
+#visual .inner .wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+#visual .inner .wrap img:nth-of-type(1) {
+  width: 80%;
+  height: 80%;
+  top: 10vh;
+  left: 6vw;
+}
+#visual .inner .wrap img:nth-of-type(2) {
+  top: 10px;
+  left: 0px;
+}
+#visual .inner .wrap img:nth-of-type(3) {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  top: 11%;
+  left: 9%;
+}
+
+#news {
+  width: 100%;
+}
+#news .inner {
+  width: 1180px;
+  height: 420px;
+  margin: 0px auto;
+  padding: 100px 0px;
+}
+#news .inner .wrap {
+  width: 100%;
+}
+#news .inner .wrap article {
+  width: 280px;
+  float: left;
+  margin-right: 20px;
+  transition: all 0.5s;
+}
+#news .inner .wrap article:last-of-type {
+  margin-right: 0px;
+}
+#news .inner .wrap article::after {
+  content: "";
+  display: block;
+  margin-left: 115px;
+  margin-top: 20px;
+  width: 50px;
+  height: 2px;
+  background: orangered;
+  transition: all 0.5s;
+}
+#news .inner .wrap article:hover {
+  transform: scale(1.1);
+}
+#news .inner .wrap article:hover::after {
+  width: 280px;
+  margin-left: 0px;
+}
+#news .inner .wrap article i {
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  color: orangered;
+}
+#news .inner .wrap article h2 {
+  font: bold 24px/1 "roboto";
+  color: #555;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#news .inner .wrap article p {
+  font: 16px/1.3 "open sans";
+  color: #777;
+  text-align: center;
+}
+
+#fix_banner {
+  width: 100%;
+  background: url(../img/fix_banner/background.jpg) no-repeat center/cover fixed;
+}
+#fix_banner .inner {
+  width: 1180px;
+  height: 600px;
+  margin: 0px auto;
+  position: relative;
+}
+#fix_banner .inner h2 {
+  font: bold 70px/1 "roboto";
+  color: orangered;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%);
+}
+#fix_banner .inner h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background: orangered;
+  margin-top: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+#fix_banner .inner p {
+  display: block;
+  width: 1000px;
+  height: 150px;
+  font: 30px/150px "open sans";
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#gallery {
+  width: 100%;
+}
+#gallery .inner {
+  width: 1180px;
+  height: 1200px;
+  margin: -150px auto 100px;
+  background: #fff;
+  padding: 30px;
+  position: relative;
+}
+#gallery .inner::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background: #ccc;
+}
+#gallery .inner .wrap {
+  width: 100%;
+}
+#gallery .inner .wrap article {
+  width: 550px;
+  height: 500px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 50px;
+  border: 1px solid #ccc;
+}
+#gallery .inner .wrap article:nth-of-type(2n) {
+  margin-right: 0px;
+}
+#gallery .inner .wrap article .img {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 30px;
+}
+#gallery .inner .wrap article .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#gallery .inner .wrap article h2 {
+  font: 22px/1 "roboto";
+  color: #555;
+  margin-bottom: 20px;
+  padding: 0px 20px;
+}
+#gallery .inner .wrap article p {
+  font: 16px/1.5 "open sans";
+  color: #777;
+  padding: 0px 20px;
+}
+#gallery .inner .wrap a {
+  display: block;
+  font: 18px/40px "open sans";
+  color: #fff;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  background: orangered;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%);
+}
 
 /*# sourceMappingURL=style.css.map */
