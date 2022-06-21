@@ -274,11 +274,11 @@
                 background: rgba(0, 0, 0, 0.6); color: #fff;
             }
             .swiper-pagination-bullet {
-                width: 20px; height: 20px; background: orangered; opacity: 1;
+                width: 10px; height: 10px; background: orangered; opacity: 1;
                 margin-right: 15px;
             }
             .swiper-pagination-bullet-active {
-                width: 25px; height: 25px; transition: all 0.5s;
+                width: 15px; height: 15px; transition: all 0.5s;
             }
         }
     }
@@ -375,10 +375,11 @@
         }
         >ul {
             width: 100%;
-            display: flex; justify-content: space-evenly;
+            display: flex; justify-content: space-between;
+            flex-wrap: wrap; align-items: baseline;
 
             li {
-                margin: 30px 0px;
+                margin: 30px 20px 0px;
 
                 a {
                     font: 14px/1 'open sans'; color: #777;
@@ -387,10 +388,10 @@
                     margin-top: 5px;
                     font: 14px/1 'open sans'; color: #777;
                 }
+                address {
+                    font: 14px/1 'open sans'; color: #777;
+                }
             }
-        }
-        address {
-            font: 14px/1 'open sans'; color: #777;
         }
     }
 }

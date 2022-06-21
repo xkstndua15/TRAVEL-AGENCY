@@ -389,15 +389,15 @@ a {
   color: #fff;
 }
 #swipers .inner .wrap .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   background: orangered;
   opacity: 1;
   margin-right: 15px;
 }
 #swipers .inner .wrap .swiper-pagination-bullet-active {
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
   transition: all 0.5s;
 }
 
@@ -533,10 +533,12 @@ a {
 #footer .inner > ul {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: baseline;
 }
 #footer .inner > ul li {
-  margin: 30px 0px;
+  margin: 30px 20px 0px;
 }
 #footer .inner > ul li a {
   font: 14px/1 "open sans";
@@ -547,7 +549,7 @@ a {
   font: 14px/1 "open sans";
   color: #777;
 }
-#footer .inner address {
+#footer .inner > ul li address {
   font: 14px/1 "open sans";
   color: #777;
 }
