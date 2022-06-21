@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAVEL AGENCY</title>
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="main.js"></script>
-    <script src="https://kit.fontawesome.com/027216c328.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/027216c328.js" crossorigin="anonymous"></script>
+    <script defer src="main.js"></script>
 </head>
 <body>
     <header id="header">
@@ -123,16 +123,28 @@
 
         <section id="swipers">
             <div class="inner">
+                <h2>Amazing Places</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
                 <div class="wrap">
                     <div class="swiper mySwiper">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        <div class="swiper-slide">Slide 4</div>
-                        <div class="swiper-slide">Slide 5</div>
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="img/swiper/road.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/swiper/mountain.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/swiper/village.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/swiper/waterfall.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/swiper/forest.jpg" alt="">
+                            </div>
                         </div>
                         <!-- If we need pagination -->
                         <div class="swiper-pagination"></div>
@@ -143,15 +155,89 @@
                     </div>
                 </div>
             </div>
+
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                    direction: "horizontal",
+                    spaceBetween: 0,
+                    slidePerView: 1,
+                    grabCursor: true,
+                    loop: true,
+                    pagination : {
+                        el : '.swiper-pagination',
+                        clickable : true,
+                    },
+                    autoplay: {
+                        delay: 2000,
+                        disableOnInteraction: false
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+            </script>
         </section>
 
         <section id="basic_banner">
+            <div class="inner">
+                <h2>Helping Dreams Do</h2>
+                <p>You can have as much or as little help from us as you want. It’s up to you. Finally, you should know we treat local people with respect and fairness. This pays back by the bucket load because well cared for locals let you get closer to their culture, their people & their nature. Which is good for them and good for you. In addition, if you wish, when you book your holiday we'll pay for a day trip for a disadvantaged child from a developing country to a Game Park, mountain or museum etc. We call this responsible tourism.</p>
+                <a href="#">get in touch</a>
+            </div>
+        </section>
 
+        <section id="information">
+            <div class="inner">
+                <div class="wrap">
+                    <article>
+                        <h2>HOT DESTINATIONS</h2>
+                        <p>37</p>
+                    </article>
+                    <article>
+                        <h2>HAPPY CLIENTS</h2>
+                        <p>677</p>
+                    </article>
+                    <article>
+                        <h2>CUPS OF COFFEE
+                        </h2>
+                        <p>87</p>
+                    </article>
+                    <article>
+                        <h2>VISITED COUNTRIES
+                        </h2>
+                        <p>107</p>
+                    </article>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer id="footer">
+        <div class="inner">
+            <nav class="menuWeb">
+                <ul id="gnb">
+                    <li><h1>TRAVEL AGENCY</h1></li>
+                    <li><a href="#">DEPARTMENT</a></li>
+                    <li><a href="#">YOUTUBE</a></li>
+                    <li><a href="#">COMMUNITY</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="#">LOCATION</a></li>
+                </ul>
+            </nav>
 
+            <ul>
+                <li><a href="#">Policy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Customers</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><p>Copyright &copy; 2022 DCODELAB All Right Reserved.</p></li>
+            </ul>
+            
+            <address>address : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, hic.<br><br>
+                TEL : +82-10-9453-9335 FAX : +82-2-2100-7999
+            </address>
+        </div>
     </footer>
 
 </body>
