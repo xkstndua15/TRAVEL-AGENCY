@@ -26,11 +26,16 @@
 
                 <div class="util">
                     <ul>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Join</a></li>
-                        <li><a href="#">SiteMap</a></li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-lock"></i><p>Login</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-key"></i><p>Join</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -60,17 +65,19 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, consequatur expedita vel repellat beatae enim.</p>
                     </article>
                     <article>
-                        <i class="fa-solid fa-suitcase-rolling"></i>
+                        <div class="backWheel"></div>
+                        <div class="frontWheel"></div>
+                        <i class="fa-solid fa-car-side"></i>
                         <h2>Travel Guides</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, consequatur expedita vel repellat beatae enim.</p>
                     </article>
                     <article>
-                        <i class="fa-solid fa-mountain-sun"></i>
+                        <i class="fa-solid fa-person-skiing"></i>
                         <h2>Extreme Tours</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, consequatur expedita vel repellat beatae enim.</p>
                     </article>
                     <article>
-                        <i class="fa-solid fa-user-astronaut"></i>
+                        <i class="fa-solid fa-plane-departure"></i>
                         <h2>Dream Vacation</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, consequatur expedita vel repellat beatae enim.</p>
                     </article>
@@ -79,9 +86,11 @@
         </section>
 
         <section id="fix_banner">
-            <div class="inner">
-                <h2>Hot Destinations</h2>
-                <p>The first place to look for environmentally friendly holidays</p>
+            <div id="background">
+                <div class="inner">
+                    <h2>Hot Destinations</h2>
+                    <p>The first place to look for environmentally friendly holidays</p>
+                </div>
             </div>
         </section>
 
@@ -121,7 +130,7 @@
             </div>
         </section>
 
-        <section id="swipers">
+        <section id="sliders">
             <div class="inner">
                 <h2>Amazing Places</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
@@ -168,7 +177,7 @@
                         clickable : true,
                     },
                     autoplay: {
-                        delay: 2000,
+                        delay: 4000,
                         disableOnInteraction: false
                     },
                     navigation: {
@@ -180,10 +189,12 @@
         </section>
 
         <section id="basic_banner">
-            <div class="inner">
-                <h2>Helping Dreams Do</h2>
-                <p>You can have as much or as little help from us as you want. It’s up to you. Finally, you should know we treat local people with respect and fairness. This pays back by the bucket load because well cared for locals let you get closer to their culture, their people & their nature. Which is good for them and good for you. In addition, if you wish, when you book your holiday we'll pay for a day trip for a disadvantaged child from a developing country to a Game Park, mountain or museum etc. We call this responsible tourism.</p>
-                <a href="#">get in touch</a>
+            <div id="background">
+                <div class="inner">
+                    <h2>Helping Dreams Do</h2>
+                    <p>You can have as much or as little help from us as you want. It’s up to you. Finally, you should know we treat local people with respect and fairness. This pays back by the bucket load because well cared for locals let you get closer to their culture, their people & their nature. Which is good for them and good for you. In addition, if you wish, when you book your holiday we'll pay for a day trip for a disadvantaged child from a developing country to a Game Park, mountain or museum etc. We call this responsible tourism.</p>
+                    <a href="#">get in touch</a>
+                </div>
             </div>
         </section>
 
@@ -215,37 +226,19 @@
 
     <footer id="footer">
         <div class="inner">
-            <nav class="menuWeb">
-                <ul id="gnb">
-                    <li><h1>TRAVEL AGENCY</h1></li>
-                    <li><a href="#">DEPARTMENT</a></li>
-                    <li><a href="#">YOUTUBE</a></li>
-                    <li><a href="#">COMMUNITY</a></li>
-                    <li><a href="#">GALLERY</a></li>
-                    <li><a href="#">LOCATION</a></li>
+            <a href="#header" class="upBtn">
+                <i class="fa-regular fa-circle-up"></i>
+            </a>
+            <div class="wrap">
+                <h2>TRAVEL AGENCY</h2>
+                <ul>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Contact us</a></li>
                 </ul>
-            </nav>
-
-            <ul>
-                <li>
-                    <address>address : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, hic.
-                    </address>
-                </li>
-                <li>
-                    <address>
-                    TEL : +82-10-0000-0000 FAX : +82-2-2100-7999
-                    </address>
-                </li>
-                <li><a href="#">Policy</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Customers</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li>
-                    <p>Copyright &copy; 2022 DCODELAB All Right Reserved.</p>
-                </li>
-            </ul>
-
-            
+                <p>Copyright &copy; 2022 DCODELAB All Right Reserved.</p>
+            </div>
         </div>
     </footer>
 
