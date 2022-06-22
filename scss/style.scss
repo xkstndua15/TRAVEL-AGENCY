@@ -7,7 +7,6 @@
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
 }
-
 // 오른쪽으로 이동하는 애니메이션
 @keyframes moveRight {
     0% {transform: translateX(0px); opacity: 1;}
@@ -16,7 +15,6 @@
     75% {transform: translateX(-200px); opacity: 0;}
     100% {transform: translateX(0px); opacity: 1;}
 }
-
 // 2번 뉴스 바퀴 animation
 @keyframes wheelAni {
     0% {
@@ -35,7 +33,6 @@
         transform: translateX(0px) rotateZ(1440deg); opacity: 1;
     }
 }
-
 // 오른쪽위로 이동하는 애니메이션
 @keyframes moveRightTop {
     0% {
@@ -54,7 +51,6 @@
         transform: translateX(0px) translateY(0px); opacity: 1;
     }
 }
-
 // 오른쪽아래로 이동하는 애니메이션
 @keyframes moveRightBottom {
     0% {
