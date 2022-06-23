@@ -105,7 +105,7 @@ a {
     opacity: 1;
   }
   25% {
-    transform: translateX(200px) translateY(50px);
+    transform: translateX(200px) translateY(100px);
     opacity: 1;
   }
   50% {
@@ -113,7 +113,7 @@ a {
     opacity: 0;
   }
   75% {
-    transform: translateX(-200px) translateY(-50px);
+    transform: translateX(-200px) translateY(-100px);
     opacity: 0;
   }
   100% {
@@ -239,7 +239,6 @@ a {
 }
 #visual .inner a:hover {
   border: 2px solid #777;
-  color: #777;
 }
 #visual .inner .wrap {
   width: 100%;
@@ -668,32 +667,80 @@ a {
 #footer .inner .wrap {
   width: 100%;
   height: 100%;
-  padding-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  padding: 60px 120px 0px;
 }
-#footer .inner .wrap h2 {
-  font: bold 30px/1 "roboto";
-  color: #aaa;
-}
-#footer .inner .wrap ul li {
+#footer .inner .wrap #footerLeftArea {
   float: left;
-  margin-right: 20px;
 }
-#footer .inner .wrap ul li:last-of-type {
+#footer .inner .wrap #footerLeftArea > h2 {
+  font: bold 25px/1 "roboto";
+  color: #bbb;
+  margin-bottom: 20px;
+}
+#footer .inner .wrap #footerLeftArea > ul > li {
+  float: left;
+  margin-right: 10px;
+  position: relative;
+  height: 20px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+#footer .inner .wrap #footerLeftArea > ul > li:last-of-type {
   margin-right: 0px;
+  padding-right: 0px;
 }
-#footer .inner .wrap ul li a {
-  font: 14px/1 "open sans";
+#footer .inner .wrap #footerLeftArea > ul > li:last-of-type::after {
+  display: none;
+}
+#footer .inner .wrap #footerLeftArea > ul > li::after {
+  display: inline-block;
+  content: "";
+  height: 12px;
+  width: 1px;
+  background: #777;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  margin-top: -5px;
+}
+#footer .inner .wrap #footerLeftArea > ul > li > a {
+  font: 15px/1 "open sans";
   color: #777;
 }
-#footer .inner .wrap p {
-  font: 12px/1 "open sans";
-  color: #555;
-  padding-top: 20px;
+#footer .inner .wrap #footerLeftArea > span {
+  font: 10px/1 "open sans";
+  color: #aaa;
+  height: 10px;
+  margin-top: 20px;
+}
+#footer .inner .wrap #footerRightArea {
+  float: right;
+}
+#footer .inner .wrap #footerRightArea h2 {
+  font: bold 20px/1 "roboto";
+  color: #bbb;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+#footer .inner .wrap #footerRightArea ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#footer .inner .wrap #footerRightArea ul li {
+  margin-right: 20px;
+  padding: 10px;
+  border: 1px solid #777;
+  border-radius: 50%;
+}
+#footer .inner .wrap #footerRightArea ul li:last-of-type {
+  margin-right: 0px;
+}
+#footer .inner .wrap #footerRightArea ul li a i {
+  font-size: 30px;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
