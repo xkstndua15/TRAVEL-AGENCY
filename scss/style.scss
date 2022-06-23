@@ -89,10 +89,10 @@
             }
         }
         #gnb {
-            position: absolute; bottom: 5px; right: 0px;
+            position: absolute; bottom: 5px; right: 20%;
 
             li {
-                float: left; margin-right: 20px;
+                float: left; margin-right: 10px;
 
                 &:last-of-type {margin-right: 0px;}
                 a {
@@ -108,23 +108,32 @@
             }
         }
         .util {
-            position: absolute; top: 15px; right: 25px;
+            position: absolute; top: 20px; right: 0px;
 
             li {
-                float: left; margin-right: 40px;
+                float: left; margin-right: 10px; padding-right: 10px;
+                position: relative;
 
-                &:last-of-type {margin-right: 0px;}
+                &::after {
+                    content: ''; display: block;
+                    width: 1px; height: 12px; background: #777;
+                    position: absolute; right: 0px; top: 50%;
+                    margin-top: -5px;
+                }
+                &:last-of-type {
+                    margin-right: 0px;
+
+                    &::after {
+                        display: none;
+                    }
+                }
+                &:hover a {
+                    color: #777;
+                }
                 a {
                     width: 100%; height: 100%;
-
-                    i {
-                        font-size: 20px; color: #000; width: 100%;
-                        text-align: center; margin-bottom: 3px;
-                        
-                    }
-                    p {
-                        font: 14px/1 'open sans'; color: #000;
-                    }
+                    font: 14px/1 'open sans'; color: #000;
+                    letter-spacing: 1px;
                 }
             }
         }
@@ -468,20 +477,11 @@
         padding: 0px 100px;
         position: relative;
 
-        .upBtn {
-            display: block; width: 50px; height: 50px;
-            position: absolute; top: 50%; right: 0px; margin-top: -25px;
-            scroll-behavior: smooth;
-
-             i {
-                font-size: 50px; color: #fff;
-             }
-        }
         .wrap {
-            width: 100%; height: 100%; padding: 60px 120px 0px;
+            width: 100%; height: 100%; padding: 0px 100px;
             
             #footerLeftArea {
-                float: left;
+                float: left; padding-top: 50px;
 
                 >h2 {
                     font: bold 25px/1 'roboto'; color: #bbb;
@@ -520,16 +520,12 @@
             }
             #footerRightArea {
                 float: right;
-
-                h2 {
-                    font: bold 20px/1 'roboto'; color: #bbb;
-                    margin-bottom: 20px; text-align: center;
-                    letter-spacing: 1px;
-                }
+                padding-top: 30px;
+                
                 ul {
-                    width: 100%;
                     display: flex; align-items: center;
                     justify-content: space-between;
+                    margin-bottom: 20px;
                     li {
                         margin-right: 20px;
                         padding: 10px;
@@ -544,7 +540,31 @@
                         }
                     }
                 }
+                address {
+                    font: 12px/1.3 'arial'; color: #777;
+                }
             }
         }
     }
+}
+
+#upBtn {
+    display: block; width: 50px; height: 50px;
+    position: fixed; bottom: 30px; right: 30px;
+    border: 3px solid orangered; padding: 10px;
+    border-radius: 50%; transition: all 1s;
+    opacity: 0;
+
+     &::before {
+        content: ''; display: block; width: 3px; height: 25px;
+        background: orangered; transform: rotate(30deg);
+        position: absolute; top: 8px; left: 14px;
+        border: 1px solid orangered; border-radius: 2px;
+     }
+     &::after {
+        content: ''; display: block; width: 3px; height: 25px;
+        background: orangered; transform: rotate(-30deg);
+        position: absolute; top: 8px; right: 14px;
+        border: 1px solid orangered; border-radius: 2px;
+     }
 }
