@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/027216c328.js" crossorigin="anonymous"></script>
-    <script defer src="main.js"></script>
+    <script defer src="js/main.js"></script>
 </head>
 <body>
     <header id="header">
@@ -17,11 +17,11 @@
             <h1><a href="index.html">TRAVEL AGENCY</a></h1>
             <nav class="menuWeb">
                 <ul id="gnb">
-                    <li><a href="#">DEPARTMENT</a></li>
-                    <li><a href="#">YOUTUBE</a></li>
-                    <li><a href="#">COMMUNITY</a></li>
-                    <li><a href="#">GALLERY</a></li>
-                    <li><a href="#">LOCATION</a></li>
+                    <li><a href="sub_page/department.html">DEPARTMENT</a></li>
+                    <li><a href="sub_page/youtube.html">YOUTUBE</a></li>
+                    <li><a href="sub_page/community.html">COMMUNITY</a></li>
+                    <li><a href="sub_page/gallery.html">GALLERY</a></li>
+                    <li><a href="sub_page/location.html">LOCATION</a></li>
                 </ul>
 
                 <div class="util">
@@ -35,6 +35,32 @@
                     </ul>
                 </div>
             </nav>
+
+            <a href="#" class="callBtn">
+                <span>메뉴호출</span>
+            </a>
+
+            <!-- 모바일 메뉴 -->
+            <nav class="menuMo">
+                <h1>
+                    <a href="index.html">TRAVEL AGENCY</a>
+                    <span>It's time for great adventure</span>
+                </h1>
+
+                <ul id="gnbMo">
+                    <li><a href="sub_page/department.html">DEPARTMENT</a></li>
+                    <li><a href="sub_page/youtube.html">YOUTUBE</a></li>
+                    <li><a href="sub_page/community.html">COMMUNITY</a></li>
+                    <li><a href="sub_page/gallery.html">GALLERY</a></li>
+                    <li><a href="sub_page/location.html">LOCATION</a></li>
+                </ul>
+
+                <ul id="login">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Join</a></li>
+                </ul>
+            </nav>
+
         </div>
     </header>
 
@@ -43,11 +69,21 @@
             <div class="inner">
                 <h2>it's time for great</h2>
                 <h3>Adventure</h3>
-                <a href="#">start now</a>
+                <a href="#" class="startBtn">start now</a>
                 <div class="wrap">
-                    <img src="img/visual/visual.jpg" alt="비주얼 배경화면">
-                    <img src="img/visual/ink.png" alt="비주얼 배경화면 틀">
-                    <img src="img/visual/ballon.png" alt="비주얼 배경화면 풍선">
+                    <img src="img/main/visual/visual.jpg" alt="비주얼 배경화면">
+                    <img src="img/main/visual/ink.png" alt="비주얼 배경화면 틀">
+                    <img src="img/main/visual/ballon.png" alt="비주얼 배경화면 풍선" data-index="1" class="mainBallon">
+                    <img src="img/main/visual/ballon.png" data-index="1" class="upBallon" alt="비주얼 배경화면 풍선">
+                    <img src="img/main/visual/ballon.png" data-index="2" class="upBallon" alt="비주얼 배경화면 풍선">
+                    <img src="img/main/visual/ballon.png" data-index="3" class="upBallon" alt="비주얼 배경화면 풍선">
+                    <img src="img/main/visual/ballon.png" data-index="4" class="upBallon" alt="비주얼 배경화면 풍선">
+                    <img src="img/main/visual/ballon.png" data-index="5" class="upBallon" alt="비주얼 배경화면 풍선">
+                    <img src="img/main/visual/ballon.png" data-index="6" class="upBallon" alt="비주얼 배경화면 풍선">
+                </div>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/xRbPAVnqtcs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <span class="closeBtn">X</span></iframe>
                 </div>
             </div>
         </figure>
@@ -61,8 +97,8 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, consequatur expedita vel repellat beatae enim.</p>
                     </article>
                     <article>
-                        <div class="backWheel"></div>
-                        <div class="frontWheel"></div>
+                        <p class="backWheel">@</p>
+                        <div class="frontWheel">@</div>
                         <i class="fa-solid fa-car-side"></i>
                         <h2>Travel Guides</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, consequatur expedita vel repellat beatae enim.</p>
@@ -95,28 +131,28 @@
                 <div class="wrap">
                     <article>
                         <div class="img">
-                            <img src="img/gallery/tower-bridge.jpg" alt="갤러리 다리 사진">
+                            <img src="img/main/gallery/tower-bridge.jpg" alt="갤러리 다리 사진">
                         </div>
                         <h2>£300+ Discounts</h2>
                         <p>From ancient cultures to amazing landscapes, find the very best discounts on offer Lorem ipsum dolor sit amet consectetur adipisicing elit. A, error!</p>
                     </article>
                     <article>
                         <div class="img">
-                            <img src="img/gallery/palace.jpg" alt="갤러리 궁전 사진">
+                            <img src="img/main/gallery/palace.jpg" alt="갤러리 궁전 사진">
                         </div>
                         <h2>Spain Holidays</h2>
                         <p>Soaring mountains, sun-soaked coasts, Moorish heritage and moreish food Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, est?</p>
                     </article>
                     <article>
                         <div class="img">
-                            <img src="img/gallery/mountain-biking.jpg" alt="갤러리 산 사진">
+                            <img src="img/main/gallery/mountain-biking.jpg" alt="갤러리 산 사진">
                         </div>
                         <h2>Cycling Holidays</h2>
                         <p>Reawaken that long lost childhood sense of freedom or challenge yourself to an adventure Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, maiores!</p>
                     </article>
                     <article>
                         <div class="img">
-                            <img src="img/gallery/desert.jpg" alt="갤러리 사막 사진">
+                            <img src="img/main/gallery/desert.jpg" alt="갤러리 사막 사진">
                         </div>
                         <h2>Africa Holidays</h2>
                         <p>Exotic souks, ancient wonders, unique wildlife and huge sand dunes in seemingly endless deserts Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, reprehenderit!</p>
@@ -136,19 +172,19 @@
                         <div class="swiper-wrapper">
                             <!-- Slides -->
                             <div class="swiper-slide">
-                                <img src="img/swiper/road.jpg" alt="">
+                                <img src="img/main/swiper/road.jpg" alt="">
                             </div>
                             <div class="swiper-slide">
-                                <img src="img/swiper/mountain.jpg" alt="">
+                                <img src="img/main/swiper/mountain.jpg" alt="">
                             </div>
                             <div class="swiper-slide">
-                                <img src="img/swiper/village.jpg" alt="">
+                                <img src="img/main/swiper/village.jpg" alt="">
                             </div>
                             <div class="swiper-slide">
-                                <img src="img/swiper/waterfall.jpg" alt="">
+                                <img src="img/main/swiper/waterfall.jpg" alt="">
                             </div>
                             <div class="swiper-slide">
-                                <img src="img/swiper/forest.jpg" alt="">
+                                <img src="img/main/swiper/forest.jpg" alt="">
                             </div>
                         </div>
                         <!-- If we need pagination -->
