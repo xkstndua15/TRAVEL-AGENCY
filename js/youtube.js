@@ -1,8 +1,5 @@
-// key: AIzaSyDv6JIUkmdFO-F6Ha1KriiO4uw0Iot8bb4;
-// playlist: PLmAX7QJDEdu3phGnuvhY1SIPB47cipfvn;
-
 const vidList = document.querySelector(".vidList");
-const key = "AIzaSyDv6JIUkmdFO-F6Ha1KriiO4uw0Iot8bb4";
+const key = config.youtubeApikey;
 const playlistId = "PLmAX7QJDEdu3phGnuvhY1SIPB47cipfvn";
 const num = 6;
 
