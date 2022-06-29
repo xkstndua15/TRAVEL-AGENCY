@@ -166,28 +166,22 @@
 }
 
 /* content 영역 */
-#content {
-    width: 100%; padding: 0px 0px 150px;
+.content {
+    width: 100%; padding: 50px 0px 150px;
 
-    .sub_visual {
-        width: 100%; height: 250px;
-        background: #bbb; margin-bottom: 100px;
-    }
     .inner {
         width: 1180px; margin: 0px auto; min-height: 500px;
 
         h1 {
-            font: normal 50px/1 'arial'; color: #000;
-            margin-bottom: 60px;
+            font: bold 50px/1 'roboto'; color: #333;
+            margin-bottom: 60px; text-align: left;
+            position: relative;
 
-            span {
-                font: normal 20px/1 '맑은 고딕'; color: #aaa;
-
-                &::before {
-                    content: '/'; margin-right: 20px; margin-left: 25px;
-                }
+            &::after {
+                content: ''; width: 70%; height: 2px;
+                background: orangered;
+                position: absolute; bottom: -20px; left: -45%;
             }
-
         }
     }
 }
@@ -272,6 +266,28 @@
     }
 }
 
+#upBtn {
+    display: block; width: 50px; height: 50px;
+    position: fixed; bottom: 30px; right: 30px;
+    border: 3px solid orangered; padding: 10px;
+    border-radius: 50%; transition: all 1s;
+    opacity: 0;
+
+     &::before {
+        content: ''; display: block; width: 3px; height: 25px;
+        background: orangered; transform: rotate(30deg);
+        position: absolute; top: 8px; left: 14px;
+        border: 1px solid orangered; border-radius: 2px;
+     }
+     &::after {
+        content: ''; display: block; width: 3px; height: 25px;
+        background: orangered; transform: rotate(-30deg);
+        position: absolute; top: 8px; right: 14px;
+        border: 1px solid orangered; border-radius: 2px;
+     }
+}
+
+
 /* Tablet 구간 */
 @media screen and (max-width: 1179px) {
     /* Header 영역 */
@@ -303,6 +319,10 @@
         .inner {
             width: 100%;
         }
+    }
+    
+    #upBtn {
+        bottom: 0px; right: 10px;
     }
 }
 

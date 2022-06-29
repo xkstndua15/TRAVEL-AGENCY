@@ -1,11 +1,3 @@
-// Mediaquery 햄버거버튼
-const menuBtn = document.querySelector(".callBtn");
-const menuMo = document.querySelector(".menuMo");
-
-// window창 맨 위로 올려주는 변수
-const scrollUp = document.querySelector("#upBtn");
-const upBtnVisible = document.getElementById("visual").offsetTop;
-
 // news 스크롤 애니메이션 변수
 const news = document.getElementById("news");
 const newsVisible = news.offsetTop - 900;
@@ -17,16 +9,6 @@ const closeBtn = document.querySelector(".closeBtn");
 const ballons = document.querySelectorAll(".upBallon");
 const mainBallon = document.querySelector(".mainBallon");
 const video = document.querySelector(".video");
-
-// click menuBtn
-menuBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    console.log("햄버거")
-
-    menuBtn.classList.toggle("on");
-    menuMo.classList.toggle("on");
-});
 
 // visual button click event
 startBtn.addEventListener("click", (e) => {
@@ -59,15 +41,6 @@ closeBtn.addEventListener("click", () => {
 addEventListener("scroll", (e) => {
     const currentScroll = window.scrollY;
 
-    // 버튼 로직
-    if(currentScroll >= upBtnVisible) {
-        scrollUp.style.opacity = "1";
-        scrollUp.style.bottom = "30px";
-    } else {
-        scrollUp.style.opacity = "0";
-        scrollUp.style.bottom = "-100px";
-    }
-
     // news 로직
     if(currentScroll >= newsVisible) {
         for(el of newsArticle) {
@@ -78,12 +51,6 @@ addEventListener("scroll", (e) => {
             el.classList.remove("on");
         }
     }
-});
-
-scrollUp.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    window.scrollTo({left: 0, top: 0, behavior: "smooth"});
 });
 
 const startButtonClicked = () => {

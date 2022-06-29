@@ -1,12 +1,12 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
 @import 'reset.scss';
-@import 'sub_page.scss';
-@import "community.scss";
-@import "department.scss";
-@import "gallery.scss";
-@import "location.scss";
-@import "youtube.scss";
+@import 'sub_page/sub_page.scss';
+@import "sub_page/community.scss";
+@import "sub_page/department.scss";
+@import "sub_page/gallery.scss";
+@import "sub_page/location.scss";
+@import "sub_page/youtube.scss";
 
 // 돌아가는 애니메이션
 @keyframes rotate {
