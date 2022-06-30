@@ -8,6 +8,7 @@
             width: 100%;
             background: #fff;
             border-radius: 10px;
+            padding: 50px;
 
                 >ul {
                     width: 100%; 
@@ -23,7 +24,10 @@
                             .image {
                                 width: 300px; height: 300px;
                                 margin: 30px auto 0px;
-                                background: url(../../img/login/person.png) center center/cover;
+
+                                img {
+                                    width: 100%; height: 100%; object-fit: cover;
+                                }
                             }
                             h2 {
                                 font: bold 100px/1 'roboto'; color: orangered;

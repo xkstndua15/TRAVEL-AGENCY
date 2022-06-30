@@ -884,7 +884,11 @@ figure.pop .closeBtn {
   width: 300px;
   height: 300px;
   margin: 30px auto 0px;
-  background: url(../../img/join/join.png) center center/cover;
+}
+.join .inner .wrap ul li .joinInfo .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .join .inner .wrap ul li .joinInfo h2 {
   font: bold 100px/1 "roboto";
@@ -958,6 +962,7 @@ figure.pop .closeBtn {
   width: 100%;
   background: #fff;
   border-radius: 10px;
+  padding: 50px;
 }
 .login .inner .wrap > ul {
   width: 100%;
@@ -979,7 +984,11 @@ figure.pop .closeBtn {
   width: 300px;
   height: 300px;
   margin: 30px auto 0px;
-  background: url(../../img/login/person.png) center center/cover;
+}
+.login .inner .wrap > ul > li .loginInfo .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .login .inner .wrap > ul > li .loginInfo h2 {
   font: bold 100px/1 "roboto";
