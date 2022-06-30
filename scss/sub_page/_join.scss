@@ -1,57 +1,80 @@
 .join {
-    width: 100%; padding: 150px 0px;
+    width: 100%;
 
     .inner {
         width: 1180px; margin: 0px auto;
 
         .wrap {
             width: 100%;
+            background: #fff;
+            padding: 50px;
+            border-radius: 10px;
 
-            fieldset{border: none;}
-            table {
-                margin: 0px auto;
-                border-top: 2px solid orangered;
-                border-bottom: 2px solid orangered;
+            ul {
+                li {
+                    float: left; width: 50%;
 
-                th, td {border-bottom: 1px solid #ddd; padding: 15px 25px;}
-                th {
-                    width: 20%;
+                    &:last-of-type {border-right: none;}
+                    .joinInfo {
+                        display: flex;
+                        flex-direction: column;
+                        .image {
+                            width: 300px; height: 300px;
+                            margin: 30px auto 0px;
+                            background: url(../../img/join/join.png) center center/cover;
+                        }
+                        h2 {
+                            font: bold 100px/1 'roboto'; color: orangered;
+                            margin-left: 120px;
+                        }
+                    }
+                    fieldset{border: none;}
+                    table {
+                        margin: 0px auto;
+                        border-top: none;
+                        border-bottom: none;
 
-                    input[type=reset], input[type=submit] {
-                        width: 30%; height: 40px;
-                        border: 1px solid #aaa; margin: 10px;
-                        font: bold 14px/40px 'open sans'; color: #555; letter-spacing: 2px;
-                        cursor: pointer; transition: 0.5s;
+                        th, td {border-bottom: 1px solid #ddd; padding: 15px 25px;}
+                        th {
+                            width: 20%;
 
-                        &:hover {
-                            background: orangered; color: #fff;
+                            input[type=reset], input[type=submit] {
+                                width: 30%; height: 40px;
+                                border: 1px solid #aaa; margin: 10px 45px;
+                                font: bold 14px/40px 'open sans'; color: #555; letter-spacing: 2px;
+                                cursor: pointer; transition: 0.5s;
+
+                                &:hover {
+                                    background: orangered; color: #fff;
+                                }
+                            }
+                        }
+                        td {
+                            border-left: 1px solid #aaa;
+
+                            input[type=text], input[type=password], select {
+                                width: 60%; background: rgba(0, 0, 0, 0.03);
+                                padding: 10px;
+                                border: 1px solid #aaa;
+                            }
+                            input[type=radio], input[type=checkbox] {
+                                margin-right: 10px;
+                            }
+                            textarea {
+                                resize: none;
+                                width: 60%; height: 50px;
+                                background: rgba(0, 0, 0, 0.03);
+                                padding: 10px;
+                                border: 1px solid #aaa;
+                            }
+                            p {
+                                font: 13px/1 'open sans';
+                                color: orangered; margin-top: 5px;
+                            }
                         }
                     }
                 }
-                td {
-                    border-left: 1px solid #aaa;
-
-                    input[type=text], input[type=password], select {
-                        width: 60%; background: rgba(0, 0, 0, 0.03);
-                        padding: 10px;
-                        border: 1px solid #aaa;
-                    }
-                    input[type=radio], input[type=checkbox] {
-                        margin-right: 30px;
-                    }
-                    textarea {
-                        resize: none;
-                        width: 60%; height: 50px;
-                        background: rgba(0, 0, 0, 0.03);
-                        padding: 10px;
-                        border: 1px solid #aaa;
-                    }
-                    p {
-                        font: 11px/1 'open sans';
-                        color: lightcoral; margin-top: 5px;
-                    }
-                }
             }
-        }
+        }    
     }
 }
