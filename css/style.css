@@ -16,7 +16,7 @@ a {
 
 .hidden {
   position: absolute;
-  top: -99999px;
+  top: -999999px;
   opacity: 0;
 }
 
@@ -461,27 +461,28 @@ a {
   margin-right: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
   position: relative;
-  background: #ddd;
   margin-bottom: 40px;
   transition: 0.5s;
+  border-radius: 10px;
+  background: #eee;
 }
 .department .wrap article:nth-of-type(3n) {
   margin-right: 0px;
 }
 .department .wrap article:hover {
-  background: skyblue;
-  box-shadow: 5px 5px 10px rgba(135, 206, 235, 0.6);
+  box-shadow: 5px 5px 10px rgba(255, 69, 0, 0.6);
   transform: scale(1.02);
+  background: orangered;
 }
 .department .wrap article:hover .memberImg {
   filter: brightness(90%);
 }
 .department .wrap article:hover h2 {
-  color: orangered;
+  color: #000;
 }
 .department .wrap article:hover a {
-  background: skyblue;
-  color: orangered;
+  color: #000;
+  border-bottom: 2px solid #000;
 }
 .department .wrap article .memberImg {
   width: 250px;
@@ -503,7 +504,7 @@ a {
 }
 .department .wrap article h2 {
   font: bold 30px/1 "open sans";
-  color: #444;
+  color: orangered;
   text-align: center;
   margin-top: 20px;
   transition: 0.5s;
@@ -513,10 +514,10 @@ a {
   width: 200px;
   height: 50px;
   border-bottom: 2px solid #444;
-  background: #ddd;
+  background: transparent;
   text-align: center;
   font: bold 20px/50px "open sans";
-  color: #333;
+  color: orangered;
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -524,7 +525,8 @@ a {
   transition: 0.5s;
 }
 .department .wrap article a:hover {
-  border-bottom: 2px solid orangered;
+  border-bottom: 2px solid #fff;
+  color: #fff;
 }
 
 aside {
@@ -572,14 +574,16 @@ aside div p {
   float: right;
 }
 aside div span {
-  font-size: 30px;
-  color: orangered;
-  width: 30px;
-  height: 30px;
   position: absolute;
   top: 0px;
-  right: 0px;
+  right: -5px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
+}
+aside div span i {
+  font-size: 50px;
+  color: orangered;
 }
 
 .vidList {
@@ -654,6 +658,73 @@ figure.pop .closeBtn {
   right: 95px;
   color: orangered;
   cursor: pointer;
+}
+
+.join {
+  width: 100%;
+  padding: 150px 0px;
+}
+.join .inner {
+  width: 1180px;
+  margin: 0px auto;
+}
+.join .inner .wrap {
+  width: 100%;
+}
+.join .inner .wrap fieldset {
+  border: none;
+}
+.join .inner .wrap table {
+  margin: 0px auto;
+  border-top: 2px solid orangered;
+  border-bottom: 2px solid orangered;
+}
+.join .inner .wrap table th, .join .inner .wrap table td {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 25px;
+}
+.join .inner .wrap table th {
+  width: 20%;
+}
+.join .inner .wrap table th input[type=reset], .join .inner .wrap table th input[type=submit] {
+  width: 30%;
+  height: 40px;
+  border: 1px solid #aaa;
+  margin: 10px;
+  font: bold 14px/40px "open sans";
+  color: #555;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.join .inner .wrap table th input[type=reset]:hover, .join .inner .wrap table th input[type=submit]:hover {
+  background: orangered;
+  color: #fff;
+}
+.join .inner .wrap table td {
+  border-left: 1px solid #aaa;
+}
+.join .inner .wrap table td input[type=text], .join .inner .wrap table td input[type=password], .join .inner .wrap table td select {
+  width: 60%;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 10px;
+  border: 1px solid #aaa;
+}
+.join .inner .wrap table td input[type=radio], .join .inner .wrap table td input[type=checkbox] {
+  margin-right: 30px;
+}
+.join .inner .wrap table td textarea {
+  resize: none;
+  width: 60%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 10px;
+  border: 1px solid #aaa;
+}
+.join .inner .wrap table td p {
+  font: 11px/1 "open sans";
+  color: lightcoral;
+  margin-top: 5px;
 }
 
 @keyframes rotate {
