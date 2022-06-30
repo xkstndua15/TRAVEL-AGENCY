@@ -66,26 +66,22 @@ addEventListener("scroll", (e) => {
     // information count 로직
     if(currentScroll >= countTop && !isTopCount) {
         isTopCount = true;
-        count(p[0], 37, 3);
-        count(p[1], 677, 5);
+        topCount(p[0], 37, 30);
+        topCount(p[1], 677, 1);
     } else if(currentScroll < countTop){
         isTopCount = false;
-        p[0].innerText = '0';
-        p[1].innerText = '0';
     }
     if(currentScroll >= countBottom && !isBottomCount) {
         isBottomCount = true
-        count(p[2], 87, 5);
-        count(p[3], 107, 5);
+        bottomCount(p[2], 87, 15);
+        bottomCount(p[3], 107, 15);
     } else if(currentScroll < countBottom) {
         isBottomCount = false;
-        p[2].innerText = '0';
-        p[3].innerText = '0';
     }
 });
 
 const startButtonClicked = () => {
-    ballons.forEach((el, index) => {
+    ballons.forEach((el) => {
         el.style.display = "none";
         el.style.top = "100%";
     });
@@ -93,17 +89,28 @@ const startButtonClicked = () => {
     video.style.zIndex = "10";
 }
 
-function count(el, num, time) {
-    let currentNum = parseInt(el.innerText);
-
-    let interver = parseInt(num / (time * 1000));
-
+function topCount(el, num, time) {
+    let currentNum = 0;
+    
     let timer = setInterval(()=> {
         currentNum++;
 
-        if(currentNum >= num)
+        if(currentNum >= num || !isTopCount)
             clearInterval(timer);
 
         el.innerText = currentNum;
-    }, interver);
+    }, time);
+}
+
+function bottomCount(el, num, time) {
+    let currentNum = 0;
+    
+    let timer = setInterval(()=> {
+        currentNum++;
+
+        if(currentNum >= num || !isBottomCount)
+            clearInterval(timer);
+
+        el.innerText = currentNum;
+    }, time);
 }

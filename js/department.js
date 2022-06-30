@@ -20,7 +20,7 @@ frame.addEventListener("click", (e) => {
                     <img src="${imgSrc}">
                     <h2>${name}</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis alias illo ea quia cum soluta, qui, blanditiis iste nemo quos distinctio, tempore quo aspernatur neque voluptatum. Optio cupiditate numquam ratione?</p>
-                    <span class="closeBtn">X</span>
+                    <span><i class="fa-solid fa-xmark closeBtn"></i></span>
                 </div>
     `
     pop.innerHTML = pops;
@@ -30,6 +30,8 @@ frame.addEventListener("click", (e) => {
 
 body.addEventListener("click", (e) => {
     let target = e.target.closest("aside");
+
+    console.log(target);
 
     if(target == undefined)
         return;
