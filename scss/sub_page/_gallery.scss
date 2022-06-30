@@ -4,16 +4,16 @@
         width: 1180px; margin: 0px auto;
         
         #searchBox{
-            width: 100%; padding: 50px 60px 0px;
+            width: 100%; padding: 0px 60px 0px;
             overflow: hidden;
-            font-size: 0;//폰트싸이즈 초기화
+            font-size: 0; //폰트싸이즈 초기화
         
-            input[type=text]{
+            input[type=text] {
                 width: 300px; height: 30px;
                 background: #fff; border: 1px solid #ddd;
                 padding-left: 10px;
             }
-            .btnSearch{
+            .searchBtn {
                 width: 80px; height: 30px;
                 background: #333; font: bold 12px/30px 'arial';
                 text-align: center;
@@ -24,8 +24,9 @@
                 vertical-align: top;
             }
         }
-        #wrap{
+        .wrap{
             width: 100%; padding: 50px; overflow: hidden;
+
             .loading{
                 width: 100px; 
                 position: absolute; top: 50%; left: 50%;
@@ -34,8 +35,7 @@
                 &.off{
                     opacity: 0;
                 }
-            }
-            
+            }            
             #list{
                 opacity: 0; 
                 transform: translateY(100px); transition: 1s;
@@ -43,7 +43,7 @@
                 &::after{content: ''; display: block; clear: both;}
         
                 li{
-                    width: calc(100% / 6); float: left; padding: 10px;
+                    width: calc(100% / 4); float: left; padding: 10px;
         
                     div{
                         width: 100%; background: #fff; padding: 20px;
@@ -90,8 +90,8 @@ aside {
         height: 100%;
     }
     span {
-        position: absolute; top: 20px; right: 20px; color: #fff;
-        font-size: 30px; cursor: pointer;
+        position: absolute; top: 20px; right: 200px; color: orangered;
+        font-size: 50px; cursor: pointer;
     }
 }
 
