@@ -69,10 +69,8 @@
                                 font: 11px/1 'arial'; color: orange;
                             }
                         }
-        
                     }
                 }
-        
                 &.on{ //로딩이 마친후 on클래스를 부여하여 복귀시킨다.
                     opacity: 1; transform: translateY(0px);
                 }
