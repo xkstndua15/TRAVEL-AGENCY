@@ -674,7 +674,7 @@ aside div span i {
 }
 .gallery .inner #wrap #list li div span strong {
   font: 11px/1 "arial";
-  color: orange;
+  color: orangered;
 }
 .gallery .inner #wrap #list.on {
   opacity: 1;
