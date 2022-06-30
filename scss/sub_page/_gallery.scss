@@ -1,0 +1,111 @@
+
+.gallery {
+    .inner {
+        width: 1180px; margin: 0px auto;
+        
+        #searchBox{
+            width: 100%; padding: 50px 60px 0px;
+            overflow: hidden;
+            font-size: 0;//폰트싸이즈 초기화
+        
+            input[type=text]{
+                width: 300px; height: 30px;
+                background: #fff; border: 1px solid #ddd;
+                padding-left: 10px;
+            }
+            .btnSearch{
+                width: 80px; height: 30px;
+                background: #333; font: bold 12px/30px 'arial';
+                text-align: center;
+                margin-left: 10px;
+                cursor: pointer;
+                color: #fff;
+                border: none;
+                vertical-align: top;
+            }
+        }
+        #wrap{
+            width: 100%; padding: 50px; overflow: hidden;
+            .loading{
+                width: 100px; 
+                position: absolute; top: 50%; left: 50%;
+                transform: translate((-50%,-50%));
+                transition: 1s;
+                &.off{
+                    opacity: 0;
+                }
+            }
+            
+            #list{
+                opacity: 0; 
+                transform: translateY(100px); transition: 1s;
+        
+                &::after{content: ''; display: block; clear: both;}
+        
+                li{
+                    width: calc(100% / 6); float: left; padding: 10px;
+        
+                    div{
+                        width: 100%; background: #fff; padding: 20px;
+                        border-radius: 5px; box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
+                        a{
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        p{
+                            font: 12px/1.2 'arial'; color: #777;
+                            margin-top: 10px; 
+                        }
+                        span{
+                            display: flex;
+                            align-items: center; margin-top: 20px;
+        
+                            img{
+                                width: 20px; height: 20px; border-radius: 50%;
+                                margin-right: 10px;
+                            }
+                            strong{
+                                font: 11px/1 'arial'; color: orange;
+                            }
+                        }
+        
+                    }
+                }
+        
+                &.on{ //로딩이 마친후 on클래스를 부여하여 복귀시킨다.
+                    opacity: 1; transform: translateY(0px);
+                }
+            }
+        }
+    }
+}
+
+aside {
+    width: 100%; height: 100vh;
+    background: rgba(0,0,0,0.6);
+    position: fixed; top: 0px; left: 0px;
+    padding: 5vw;
+    display: flex; justify-content: center; align-items: center;
+
+    img {
+        height: 100%;
+    }
+    span {
+        position: absolute; top: 20px; right: 20px; color: #fff;
+        font-size: 30px; cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 1599px) {
+body #wrap #list li{width: calc(100% / 5);}
+}
+@media screen and (max-width: 1399px) {
+body #wrap #list li{width: calc(100% / 4);}
+}
+@media screen and (max-width: 999px) {
+body #wrap #list li{width: calc(100% / 3);}
+}
+@media screen and (max-width: 749px) {
+body #wrap #list li{width: calc(100% / 2);}
+}

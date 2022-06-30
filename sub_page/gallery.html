@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gallery</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
@@ -67,10 +67,26 @@
         </div>
     </header>
 
-    <div class="content">
+    <div class="content gallery">
         <div class="inner">
             <h1>GALLERY</h1>
-            <div class="wrap"></div>
+            <div id="searchBox">
+                <input type="text" id="search" placeholder="검색어를 입력해주세요">
+                <button class="btnSearch">Search</button>
+            </div>
+            <div class="wrap">
+                <img src="../img/gallery/loading.gif" class="loading" alt="">
+                <ul id="list">
+                    <!-- <li class="item">
+                        <div>
+                            <a href="큰이미지주소">
+                                <img src="썸네일이미지주소" alt="">
+                            </a>
+                            <p>이미지 제목</p>
+                        </div>
+                    </li> -->
+                </ul>
+            </section>
         </div>
     </div>
 
