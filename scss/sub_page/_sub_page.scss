@@ -173,14 +173,17 @@
         width: 1180px; margin: 0px auto; min-height: 500px;
 
         h1 {
-            font: bold 50px/1 'roboto'; color: #333;
-            margin-bottom: 60px; text-align: left;
-            position: relative;
+            font: bold 50px/1 'Montserrat'; color: #555;
+            margin-bottom: 100px; text-align: left;
+            position: relative; letter-spacing: 1px;
+            text-align: center;
 
             &::after {
-                content: ''; width: 70%; height: 2px;
+                content: ''; width: 50%; height: 3px;
                 background: orangered;
-                position: absolute; bottom: -20px; left: -45%;
+                position: absolute; bottom: -20px; left: 50%;
+                transform: translateX(-50%);
+                transition: 0.5s;
             }
         }
     }
