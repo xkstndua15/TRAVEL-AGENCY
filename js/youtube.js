@@ -1,5 +1,5 @@
 const vidList = document.querySelector(".vidList");
-const key = config.youtubeApikey;
+const key = "AIzaSyDv6JIUkmdFO-F6Ha1KriiO4uw0Iot8bb4";
 const playlistId = "PLmAX7QJDEdu3phGnuvhY1SIPB47cipfvn";
 const num = 6;
 
