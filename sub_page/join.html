@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/027216c328.js" crossorigin="anonymous"></script>
+    <!-- <script defer src="../js/sub.js"></script> -->
+    <script defer src="../js/header.js"></script>
+</head>
+<body>
+    
+    <header id="header_sub">
+        <div class="inner">
+            <h1><a href="../index.html">TRAVEL AGENCY</a></h1>
+            <nav class="menuWeb">
+                <ul id="gnb">
+                    <li><a href="department.html">DEPARTMENT</a></li>
+                    <li><a href="youtube.html">YOUTUBE</a></li>
+                    <li><a href="community.html">COMMUNITY</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="location.html">LOCATION</a></li>
+                </ul>
+
+                <div class="util">
+                    <ul>
+                        <li>
+                            <a href="#">Login</a>
+                        </li>
+                        <li>
+                            <a href="#">Join</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <a href="#" class="callBtn">
+                <span>메뉴호출</span>
+            </a>
+
+            <!-- 모바일 메뉴 -->
+            <nav class="menuMo">
+                <h1>
+                    <a href="../index.html">TRAVEL AGENCY</a>
+                    <span>It's time for great adventure</span>
+                </h1>
+
+                <ul id="gnbMo">
+                    <li><a href="department.html">DEPARTMENT</a></li>
+                    <li><a href="youtube.html">YOUTUBE</a></li>
+                    <li><a href="community.html">COMMUNITY</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="location.html">LOCATION</a></li>
+                </ul>
+
+                <ul id="login">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Join</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <div class="content join">
+        <div class="inner">
+            <h1>JOIN</h1>
+            <div class="wrap">
+                <form action="result.html" method="get" id="member">
+                    <fieldset>
+                        <legend class="hidden">회원가입 폼 입력 양식</legend>
+
+                        <table>
+                            <caption class="hidden">회원가입을 위한 아이디, 비밀번호, 이메일, 성별, 취미, 소개를 입력할 테이블</caption>
+
+                            <tbody>
+                                <!-- User Id -->
+                                <tr>
+                                    <th scope="row"><label for="userId">USER ID</label></th>
+                                    <td><input type="text" name="userId" id="userId" placeholder="Enter ID" required></td>
+                                </tr>
+
+                                <!-- Password -->
+                                <tr>
+                                    <th scope="row"><label for="pwd">PASSWORD</label></th>
+                                    <td><input type="password" name="pwd" id="pwd" placeholder="Enter Password" required></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="pwdRe">RE-PASSWORD</label></th>
+                                    <td><input type="password" name="pwdRe" id="pwdRe" placeholder="Re Enter Password" required></td>
+                                </tr>
+
+                                <!-- User Email -->
+                                <tr>
+                                    <th scope="row"><label for="userEmail">USER EMAIL</label></th>
+                                    <td><input type="text" name="userEmail" id="userEmail" placeholder="Enter Email" required></td>
+                                </tr>
+
+                                <!-- Gender -->
+                                <tr>
+                                    <th scope="row">GENDER<label for="gender"></label></th>
+                                    <td>
+                                        <label for="male">Male</label>
+                                        <input type="radio" name="gender" id="male" value="male">
+
+                                        <label for="female">Female</label>
+                                        <input type="radio" name="gender" id="female" value="female">
+                                    </td>
+                                </tr>
+
+                                <!-- Hobby -->
+                                <tr>
+                                    <th scope="row">HOBBY</th>
+                                    <td>
+                                        <label for="sport">Sports</label>
+                                        <input type="checkbox" name="hobby" id="sports">
+                                        
+                                        <label for="music">Music</label>
+                                        <input type="checkbox" name="hobby" id="music">
+                                        
+                                        <label for="game">Game</label>
+                                        <input type="checkbox" name="hobby" id="game">
+                                        
+                                        <label for="reading">Reading</label>
+                                        <input type="checkbox" name="hobby" id="reading">
+                                    </td>
+                                </tr>
+
+                                <!-- Introduce -->
+                                <tr>
+                                    <th scope="row"><label for="introduce">INTRODUCE</label></th>
+                                    <td>
+                                        <textarea name="introduce" id="introduce" placeholder="Enter Introduce Yourself" required></textarea>
+                                    </td>
+                                </tr>
+
+                                <!-- button -->
+                                <tr>
+                                    <th colspan="2">
+                                        <input type="reset" value="cancel">
+                                        <input type="submit" value="submit">
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer_sub">
+        <div class="inner">
+            <div class="wrap">
+                <div id="footerLeftArea">
+                    <h2>TRAVEL AGENCY</h2>
+                    <ul>
+                        <li><a href="#">Policy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Customers</a></li>
+                    </ul>
+                    <span>
+                        Copyright &copy; 2022 DCODELAB All Right Reserved.
+                    </span>
+                </div>
+                <div id="footerRightArea">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <address>30-71, Gwangpyeong-ro 10-gil <br> Gangnam-gu, Seoul, Republic of Korea <br><br>+82-10-0000-0000</address>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" id="upBtn"></a>
+    
+</body>
+</html>

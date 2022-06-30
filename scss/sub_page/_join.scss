@@ -1,0 +1,57 @@
+.join {
+    width: 100%; padding: 150px 0px;
+
+    .inner {
+        width: 1180px; margin: 0px auto;
+
+        .wrap {
+            width: 100%;
+
+            fieldset{border: none;}
+            table {
+                margin: 0px auto;
+                border-top: 2px solid orangered;
+                border-bottom: 2px solid orangered;
+
+                th, td {border-bottom: 1px solid #ddd; padding: 15px 25px;}
+                th {
+                    width: 20%;
+
+                    input[type=reset], input[type=submit] {
+                        width: 30%; height: 40px;
+                        border: 1px solid #aaa; margin: 10px;
+                        font: bold 14px/40px 'open sans'; color: #555; letter-spacing: 2px;
+                        cursor: pointer; transition: 0.5s;
+
+                        &:hover {
+                            background: orangered; color: #fff;
+                        }
+                    }
+                }
+                td {
+                    border-left: 1px solid #aaa;
+
+                    input[type=text], input[type=password], select {
+                        width: 60%; background: rgba(0, 0, 0, 0.03);
+                        padding: 10px;
+                        border: 1px solid #aaa;
+                    }
+                    input[type=radio], input[type=checkbox] {
+                        margin-right: 30px;
+                    }
+                    textarea {
+                        resize: none;
+                        width: 60%; height: 50px;
+                        background: rgba(0, 0, 0, 0.03);
+                        padding: 10px;
+                        border: 1px solid #aaa;
+                    }
+                    p {
+                        font: 11px/1 'open sans';
+                        color: lightcoral; margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
