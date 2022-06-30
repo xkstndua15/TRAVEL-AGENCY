@@ -1,0 +1,83 @@
+.login {
+    width: 100%;
+
+    .inner {
+        width: 1180px; margin: 0px auto;
+
+        .wrap {
+            width: 100%;
+            background: #fff;
+            border-radius: 10px;
+
+                >ul {
+                    width: 100%; 
+
+                    >li {
+                        width: 50%; height: 500px; float: left;
+                        border-right: 1px solid #eee;
+
+                        &:last-of-type {border-right: none;}
+                        .loginInfo {
+                            display: flex;
+                            flex-direction: column;
+                            .image {
+                                width: 300px; height: 300px;
+                                margin: 30px auto 0px;
+                                background: url(../../img/login/person.png) center center/cover;
+                            }
+                            h2 {
+                                font: bold 100px/1 'roboto'; color: orangered;
+                                text-align: center;
+                            }
+                        }
+                        .loginBox {
+                            .inputBox {
+                                display: flex; flex-direction: column;
+                                span {
+                                    font: 20px/1 'open sans'; color: #333;
+                                    text-align: center; margin-top: 50px;
+                                }
+                                input {
+                                    height: 40px;
+                                    margin: 20px 120px 0px;
+                                    border-radius: 10px;
+                                    border: 1px solid orangered;
+                                    transition: border 0.5s;
+
+                                    &[placeholder] {
+                                        font: 16px/1 'arial'; padding: 5px;
+                                    }
+                                }
+                            }
+                            >ul {
+                                width: 100%;
+
+                                li {
+                                    float: left;
+                                    margin-top: 100px;
+                                    margin-left: 60px;
+
+                                    a {
+                                        display: block; text-align: center;
+                                        width: 200px; height: 50px; 
+                                        font: bold 20px/50px 'open sans';
+                                        color: #000;
+                                        background: rgba(255, 69, 0, 0.8);
+                                        border-radius: 10px;
+                                        transition: 0.5s;
+
+                                        &:hover {
+                                            background: #333;
+                                            color: orangered;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                
+            }
+        }
+    }
