@@ -457,6 +457,9 @@ a {
 }
 .community {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 .community .inner {
   width: 1180px;
@@ -464,11 +467,15 @@ a {
 }
 .community .inner .wrap {
   width: 100%;
+  padding: 50px;
+  background: #fff;
+  border-radius: 10px;
 }
 .community .inner .wrap .tab {
   position: relative;
   background: #fff;
-  padding: 50px;
+  padding: 0px 20px 20px;
+  margin-top: 20px;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   overflow: hidden;
@@ -480,10 +487,25 @@ a {
   transform: rotate(270deg);
   color: orangered;
 }
+.community .inner .wrap .tab input:checked ~ .contents {
+  max-height: 100vh;
+}
+.community .inner .wrap .tab input:checked ~ label h3 {
+  background: #fff;
+  padding: 2px 10px;
+  border-radius: 2px;
+  color: #333;
+  border-bottom: 1px solid oranred;
+}
+.community .inner .wrap .tab input:checked ~ label {
+  border-bottom: 2px solid orangered;
+}
 .community .inner .wrap .tab label {
   display: flex;
-  justify-content: center;
   align-items: center;
+  cursor: pointer;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333;
 }
 .community .inner .wrap .tab label::after {
   content: ">";
@@ -491,20 +513,39 @@ a {
   position: absolute;
   right: 20px;
   font-size: 2em;
-  color: rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s;
+  color: rgba(0, 0, 0, 0.6);
+  transition: transform 1s;
 }
 .community .inner .wrap .tab label h2 {
   width: 40px;
   height: 40px;
-  background: #222;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: #333;
   font-size: 1.25em;
   border-radius: 5px;
   margin-right: 10px;
+}
+.community .inner .wrap .tab label h3 {
+  position: relative;
+  font-weight: 500;
+  color: #333;
+  z-index: 10;
+}
+.community .inner .wrap .tab:hover label:after {
+  color: #333;
+}
+.community .inner .wrap .tab .contents {
+  max-height: 0;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.community .inner .wrap .tab .contents p {
+  position: relative;
+  padding: 20px 20px;
+  color: #333;
+  z-index: 10;
 }
 
 .department .wrap {
@@ -778,14 +819,92 @@ aside span {
     width: 50%;
   }
 }
-.vidList {
+.location {
+  width: 100%;
+}
+.location .inner {
+  width: 1180px;
+  margin: 0px auto;
+}
+.location .inner .wrap {
+  width: 100%;
+  background: #fff;
+  padding: 50px 0px;
+  border-radius: 10px;
+}
+.location .inner .wrap article {
+  width: 280px;
+  height: 200px;
+  float: left;
+  margin-right: 20px;
+}
+.location .inner .wrap article:last-of-type {
+  margin-right: 0px;
+}
+.location .inner .wrap article i {
+  font-size: 50px;
+  color: orangered;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.location .inner .wrap article h2 {
+  font: bold 22px/1 "roboto";
+  text-align: center;
+  margin-bottom: 20px;
+}
+.location .inner .wrap article p {
+  font: 14px/1.3 "open sans";
+  text-align: center;
+}
+.location .inner .wrap .mapBox {
+  width: 100%;
+  position: relative;
+}
+.location .inner .wrap .mapBox h2 {
+  font: bold 30px/1 "roboto";
+  text-align: center;
+  margin-bottom: 20px;
+}
+.location .inner .wrap .mapBox p {
+  font: 14px/1.3 "open sans";
+  text-align: center;
+  margin-bottom: 20px;
+}
+.location .inner .wrap .mapBox #map {
+  width: 100%;
+  height: 600px;
+  border-radius: 10px;
+}
+.location .inner .infoWindow {
+  width: 100%;
+  padding: 0px 5px;
+  margin-left: 22px;
+  margin-top: 2px;
+  font: bold 15px/1 "open sans";
+  color: orangered;
+}
+
+.youtube {
+  width: 100%;
+}
+.youtube .inner {
+  width: 1180px;
+}
+.youtube .inner .wrap {
+  width: 100%;
+  padding: 50px;
+  background: #fff;
+  border-radius: 10px;
+}
+.youtube .inner .wrap .vidList {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
 }
-.vidList article {
+.youtube .inner .wrap .vidList article {
   width: 32%;
   height: 400px;
   border-bottom: 1px solid orangered;
@@ -793,38 +912,38 @@ aside span {
   box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.3);
   transition: 0.5s;
 }
-.vidList article:hover {
+.youtube .inner .wrap .vidList article:hover {
   transform: scale(1.02);
 }
-.vidList article .pic {
+.youtube .inner .wrap .vidList article .pic {
   display: block;
   width: 100%;
   height: 60%;
 }
-.vidList article .pic > img {
+.youtube .inner .wrap .vidList article .pic > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.vidList article .con {
+.youtube .inner .wrap .vidList article .con {
   width: 100%;
   height: 40%;
   padding: 20px;
 }
-.vidList article .con h2 {
+.youtube .inner .wrap .vidList article .con h2 {
   font: bold 20px/1.2 "roboto";
   color: #444;
   margin-bottom: 10px;
   height: 25%;
 }
-.vidList article .con p {
+.youtube .inner .wrap .vidList article .con p {
   font: 14px/1.4 "open sans";
   color: #666;
   margin-bottom: 10px;
   height: 40%;
   margin-bottom: 20px;
 }
-.vidList article .con span {
+.youtube .inner .wrap .vidList article .con span {
   font: bold 16px/1 "open sans";
   color: orangered;
 }

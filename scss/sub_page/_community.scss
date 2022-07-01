@@ -1,44 +1,83 @@
 .community {
     width: 100%;
+    display: flex;
+    flex-direction: column; margin-bottom: 20px;
 
     .inner {
         width: 1180px; margin: 0px auto;
 
         .wrap {
-            width: 100%;
+            width: 100%; padding: 50px;
+            background: #fff; border-radius: 10px;
 
-            .tab {
+            .tab{
                 position: relative; background: #fff;
-                padding: 50px;
+                padding: 0px 20px 20px;
+                margin-top: 20px;
                 box-shadow: 0 15px 25px rgba(0,0,0,0.05);
                 border-radius: 5px;
                 overflow: hidden;
-
-                input {
+        
+                input{
                     appearance: none;
 
-                    &:checked ~ label::after {
+                    &:checked ~ label::after{
                         transform: rotate(270deg);
                         color: orangered;
                     }
+                    &:checked ~ .contents{
+                        max-height: 100vh;
+                    }
+                    &:checked ~ label h3{
+                        background: #fff;
+                        padding: 2px 10px; border-radius: 2px;
+                        color: #333;
+                        border-bottom: 1px solid oranred;
+                    }
+                    &:checked ~ label {
+                        border-bottom: 2px solid orangered;
+                    }
                 }
-                label {
-                    display: flex; justify-content: center; align-items: center;
-
-                    &::after {
-                        content: ">";
+                label{
+                    display: flex; align-items: center; cursor: pointer;
+                    padding-bottom: 10px;
+                    border-bottom: 2px solid #333;
+        
+                    &::after{
+                        content: '>';
                         transform: rotate(90deg);
                         position: absolute; right: 20px;
                         font-size: 2em;
-                        color: rgba(0, 0, 0, 0.5);
-                        transition: transform 0.3s;
+                        color: rgba(0,0,0,0.6);
+                        transition: transform 1s;
                     }
-                    h2 {
-                        width: 40px; height: 40px; background: #222;
-                        display: flex; justify-content: center; align-items: center;
-                        color: #fff;
+                    h2{
+                        width: 40px; height: 40px;
+                        display: flex;
+                        justify-content: center; align-items: center;
+                        color: #333;
                         font-size: 1.25em;
                         border-radius: 5px; margin-right: 10px;
+                    }
+                    h3{
+                        position: relative;
+                        font-weight: 500; color: #333; z-index: 10;
+                    }
+                }
+        
+                &:hover label:after{
+                    color: #333;
+                }
+        
+                .contents{
+                    max-height: 0;
+                    transition: 0.5s;
+                    overflow: hidden;
+                    p{
+                        position: relative;
+                        padding: 20px 20px;
+                        color: #333;
+                        z-index: 10;
                     }
                 }
             }
