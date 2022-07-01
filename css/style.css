@@ -1652,7 +1652,7 @@ body {
   top: -40px;
   right: 0px;
   font-size: 40px;
-  background: lightblue;
+  background: #333;
   color: orangered;
   display: flex;
   justify-content: center;
