@@ -1,0 +1,54 @@
+.location {
+    width: 100%;
+
+    .inner {
+        width: 1180px; margin: 0px auto;
+
+        .wrap {
+            width: 100%; background: #fff;
+            padding: 50px 0px; border-radius: 10px;
+
+            article {
+                width: 280px; height: 200px; float: left;
+                margin-right: 20px;
+
+                &:last-of-type {margin-right: 0px;}
+                i {
+                    font-size: 50px; color: orangered;
+                    display: flex; justify-content: center;
+                    margin-bottom: 20px;
+                }
+                h2 {
+                    font: bold 22px/1 'roboto';
+                    text-align: center; margin-bottom: 20px;
+                }
+                p {
+                    font: 14px/1.3 'open sans';
+                    text-align: center;
+                }
+            }
+            .mapBox {
+                width: 100%; position: relative;
+
+                h2 {
+                    font: bold 30px/1 'roboto';
+                    text-align: center; margin-bottom: 20px;
+                }
+                p {
+                    font: 14px/1.3 'open sans';
+                    text-align: center; margin-bottom: 20px;
+                }
+                #map {
+                    width: 100%; height: 600px;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .infoWindow {
+            width: 100%; padding: 0px 5px;
+            margin-left: 22px; margin-top: 2px;
+            font: bold 15px/1 'open sans'; color: orangered;
+        }
+    }
+}

@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/027216c328.js" crossorigin="anonymous"></script>
-    <!-- <script defer src="../js/sub.js"></script> -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ac9102a79a8bcdc26afab2ec45832888"></script>
+    <script defer src="../js/location.js"></script>
     <script defer src="../js/header.js"></script>
 </head>
 <body>
@@ -66,10 +67,37 @@
         </div>
     </header>
 
-    <div class="content">
+    <div class="content location">
         <div class="inner">
             <h1>LOCATION</h1>
-            <div class="wrap"></div>
+            <div class="wrap">
+                <article>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h2>OUR MAIN OFFICE</h2>
+                    <p>241, Hyowon-ro, Paldal-gu, Suwon-si, Gyeonggi-do</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-phone"></i>
+                    <h2>PHONE NUMBER</h2>
+                    <p>234-9876-5400</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-fax"></i>
+                    <h2>FAX</h2>
+                    <p>1-234-567-8900</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-envelope"></i>
+                    <h2>MAIL</h2>
+                    <p>xkstndua15@naver.com</p>
+                </article>
+
+                <div class="mapBox">
+                    <h2>WE ARE HERE</h2>
+                    <p>MON-FRI 9:00AM - 6PM</p>
+                    <div id="map"></div>
+                </div>
+            </div>
         </div>
     </div>
 
