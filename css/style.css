@@ -1607,7 +1607,7 @@ body {
   left: 20%;
   transition-duration: 6s;
 }
-#visual .inner .video {
+#visual .inner .sitemap {
   width: 100%;
   height: 80%;
   position: absolute;
@@ -1617,11 +1617,35 @@ body {
   opacity: 0;
   z-index: -1;
 }
-#visual .inner .video iframe {
+#visual .inner .sitemap ul {
   width: 100%;
   height: 100%;
 }
-#visual .inner .video .closeBtn {
+#visual .inner .sitemap ul li {
+  width: 50%;
+  height: 50%;
+  float: left;
+  background: rgb(0, 0, 0);
+  position: relative;
+}
+#visual .inner .sitemap ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(30%);
+}
+#visual .inner .sitemap ul li a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid orangered;
+}
+#visual .inner .sitemap ul li a:hover {
+  color: #333;
+  background: #fff;
+}
+#visual .inner .sitemap .closeBtn {
   width: 40px;
   height: 40px;
   position: absolute;
@@ -1636,19 +1660,19 @@ body {
   cursor: pointer;
 }
 
-#news {
+#introduce {
   width: 100%;
   overflow: hidden;
 }
-#news .inner {
+#introduce .inner {
   width: 1180px;
   margin: 0px auto;
   padding: 100px 0px;
 }
-#news .inner .wrap {
+#introduce .inner .wrap {
   width: 100%;
 }
-#news .inner .wrap article {
+#introduce .inner .wrap article {
   width: 280px;
   float: left;
   margin-right: 20px;
@@ -1659,14 +1683,14 @@ body {
   opacity: 0;
   transition: 1s;
 }
-#news .inner .wrap article.on {
+#introduce .inner .wrap article.on {
   transform: translateY(0px);
   opacity: 1;
 }
-#news .inner .wrap article:last-of-type {
+#introduce .inner .wrap article:last-of-type {
   margin-right: 0px;
 }
-#news .inner .wrap article::after {
+#introduce .inner .wrap article::after {
   content: "";
   display: block;
   margin-left: 50%;
@@ -1677,60 +1701,60 @@ body {
   transition: all 0.5s;
   transform: translateX(-50%);
 }
-#news .inner .wrap article:hover {
+#introduce .inner .wrap article:hover {
   transform: scale(1.1);
 }
-#news .inner .wrap article:hover:nth-of-type(1) i {
+#introduce .inner .wrap article:hover:nth-of-type(1) i {
   animation: rotate 2s linear infinite;
 }
-#news .inner .wrap article:hover:nth-of-type(2) {
+#introduce .inner .wrap article:hover:nth-of-type(2) {
   position: relative;
 }
-#news .inner .wrap article:hover:nth-of-type(2) .backWheel, #news .inner .wrap article:hover:nth-of-type(2) .frontWheel {
+#introduce .inner .wrap article:hover:nth-of-type(2) .backWheel, #introduce .inner .wrap article:hover:nth-of-type(2) .frontWheel {
   animation: wheelAni 3.5s linear infinite;
 }
-#news .inner .wrap article:hover:nth-of-type(2) i {
+#introduce .inner .wrap article:hover:nth-of-type(2) i {
   animation: moveRight 3.5s linear infinite;
 }
-#news .inner .wrap article:hover:nth-of-type(3) i {
+#introduce .inner .wrap article:hover:nth-of-type(3) i {
   animation: moveRightBottom 3s linear infinite;
 }
-#news .inner .wrap article:hover:nth-of-type(4) i {
+#introduce .inner .wrap article:hover:nth-of-type(4) i {
   animation: moveRightTop 3s linear infinite;
 }
-#news .inner .wrap article:hover::after {
+#introduce .inner .wrap article:hover::after {
   width: 100%;
   margin-left: 0px;
   transform: translateX(0%);
 }
-#news .inner .wrap article:nth-of-type(2) .backWheel {
+#introduce .inner .wrap article:nth-of-type(2) .backWheel {
   font: 12px/1 "arial";
   color: orangered;
   position: absolute;
   top: 18%;
   left: 40%;
 }
-#news .inner .wrap article:nth-of-type(2) .frontWheel {
+#introduce .inner .wrap article:nth-of-type(2) .frontWheel {
   font: 12px/1 "arial";
   color: orangered;
   position: absolute;
   top: 18%;
   left: 55.5%;
 }
-#news .inner .wrap article i {
+#introduce .inner .wrap article i {
   font-size: 70px;
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
   color: orangered;
 }
-#news .inner .wrap article h2 {
+#introduce .inner .wrap article h2 {
   font: bold 24px/1 "roboto";
   color: #555;
   text-align: center;
   margin-bottom: 20px;
 }
-#news .inner .wrap article p {
+#introduce .inner .wrap article p {
   font: 16px/1.3 "open sans";
   color: #777;
   text-align: center;
@@ -2185,22 +2209,22 @@ body {
     height: 300px;
     left: 0%;
   }
-  #news .inner {
+  #introduce .inner {
     width: 100%;
     padding: 100px 50px;
   }
-  #news .inner .wrap article {
+  #introduce .inner .wrap article {
     width: 22%;
     float: left;
     margin-right: 4%;
   }
-  #news .inner .wrap article:nth-of-type(2) .backWheel {
+  #introduce .inner .wrap article:nth-of-type(2) .backWheel {
     display: none;
   }
-  #news .inner .wrap article:nth-of-type(2) .frontWheel {
+  #introduce .inner .wrap article:nth-of-type(2) .frontWheel {
     display: none;
   }
-  #news .inner .wrap article::after {
+  #introduce .inner .wrap article::after {
     margin-left: 50%;
     transform: translateX(-50%);
   }
@@ -2424,15 +2448,15 @@ body {
     width: 200px;
     height: 200px;
   }
-  #news .inner {
+  #introduce .inner {
     padding-top: 50px;
   }
-  #news .inner .wrap article {
+  #introduce .inner .wrap article {
     width: 49%;
     margin-right: 2%;
     margin-bottom: 50px;
   }
-  #news .inner .wrap article:nth-of-type(2n) {
+  #introduce .inner .wrap article:nth-of-type(2n) {
     margin-right: 0px;
   }
   #fix_banner .inner {
@@ -2569,15 +2593,15 @@ body {
     width: 200px;
     height: 200px;
   }
-  #news .inner {
+  #introduce .inner {
     padding-top: 50px;
   }
-  #news .inner .wrap article {
+  #introduce .inner .wrap article {
     width: 49%;
     margin-right: 2%;
     margin-bottom: 50px;
   }
-  #news .inner .wrap article:nth-of-type(2n) {
+  #introduce .inner .wrap article:nth-of-type(2n) {
     margin-right: 0px;
   }
   #fix_banner .inner {

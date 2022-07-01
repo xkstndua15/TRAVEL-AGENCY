@@ -1,14 +1,14 @@
 // news 스크롤 애니메이션 변수
-const news = document.getElementById("news");
-const newsVisible = news.offsetTop - 900;
-const newsArticle = news.querySelectorAll("article");
+const introduce = document.getElementById("introduce");
+const newsVisible = introduce.offsetTop - 900;
+const newsArticle = introduce.querySelectorAll("article");
 
 // visual 버튼 클릭 애니메이션 변수
 const startBtn =  document.querySelector(".startBtn");
 const closeBtn = document.querySelector(".closeBtn");
 const ballons = document.querySelectorAll(".upBallon");
 const mainBallon = document.querySelector(".mainBallon");
-const video = document.querySelector(".video");
+const sitemap = document.querySelector(".sitemap");
 
 // information 변수
 const information = document.getElementById("information");
@@ -35,8 +35,8 @@ startBtn.addEventListener("click", (e) => {
 
 // video close button click event
 closeBtn.addEventListener("click", () => {
-    video.style.opacity = "0";
-    video.style.zIndex = "-1";
+    sitemap.style.opacity = "0";
+    sitemap.style.zIndex = "-1";
 
     ballons.forEach((el, index) => {
         el.style.display = "block";
@@ -85,8 +85,8 @@ const startButtonClicked = () => {
         el.style.display = "none";
         el.style.top = "100%";
     });
-    video.style.opacity = "1";
-    video.style.zIndex = "10";
+    sitemap.style.opacity = "1";
+    sitemap.style.zIndex = "10";
 }
 
 function topCount(el, num, time) {
