@@ -1,3 +1,7 @@
+const mainBtn = document.querySelector(".mainBtn");
+const subBtn = document.querySelector(".subBtn");
+const trafficBtn = document.querySelector(".trafficBtn");
+
 const mapContainer = document.getElementById("map");
 const mapOption = {
     center: new kakao.maps.LatLng(37.2634061, 127.0285841),
@@ -22,25 +26,72 @@ function setDraggable(draggable) {
     map.setDraggable(draggable);    
 }
 
-// add marker
-const markerPosition = new kakao.maps.LatLng(37.2634061, 127.0285841);
-const markerImage = new kakao.maps.MarkerImage("../img/location/location.png", new kakao.maps.Size(64, 69), {offset: new kakao.maps.Point(27, 69)});
+const markerOptions = [
+    {
+        title: "main",
+        latlng: new kakao.maps.LatLng(37.2634061, 127.0285841),
+        imgSrc: "../img/location/location.png",
+        imgSize: new kakao.maps.Size(64, 69),
+        imgPos: {offset: new kakao.maps.Point(27, 69)},
+        button: mainBtn,
+        iwPosition: new kakao.maps.LatLng(37.2641061, 127.0286841)
+    },
+    {
+        title: "sub",
+        latlng: new kakao.maps.LatLng(37.5662952, 126.9779451),
+        imgSrc: "../img/location/location.png",
+        imgSize: new kakao.maps.Size(64, 69),
+        imgPos: {offset: new kakao.maps.Point(27, 69)},
+        button: subBtn,
+        iwPosition: new kakao.maps.LatLng(37.5669952, 126.9780451)
+    }
+]
 
-marker = new kakao.maps.Marker({
-    position: markerPosition,
-    image: markerImage
-});
+for(let i = 0; i < markerOptions.length; i++) {
+    new kakao.maps.Marker({
+        map: map,
+        position: markerOptions[i].latlng,
+        title: markerOptions[i].title,
+        image: new kakao.maps.MarkerImage(markerOptions[i].imgSrc, markerOptions[i].imgSize, markerOptions[i].imgPos)
+    });
+    new kakao.maps.InfoWindow({
+        map: map,
+        position: markerOptions[i].iwPosition,
+        content: `<div class="infoWindow">Travel Agency</div>`,
+    });
 
-marker.setMap(map);
+    markerOptions[i].button.addEventListener("click", (e) => {
+        e.preventDefault();
 
-// add info window
-const iwContent = `<div class="infoWindow">Travel Agency</div>`;
-const iwPosition = new kakao.maps.LatLng(37.2641061, 127.0286841);
-const iwRemoveable = true;
+        for(let j = 0; j < markerOptions.length; j++) {
+            markerOptions[j].button.classList.remove("on");
+        }
+        markerOptions[i].button.classList.add("on");
 
-const infowindow = new kakao.maps.InfoWindow({
-    map: map,
-    position: iwPosition,
-    content: iwContent,
-    removeable: iwRemoveable
+        moveTo(markerOptions[i].latlng);
+    });
+    
+    moveTo(new kakao.maps.LatLng(37.2634061, 127.0285841));
+}
+
+function moveTo(target) {
+    const moveLatLon = target;
+
+    map.panTo(moveLatLon);
+}
+
+trafficBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    trafficBtn.classList.toggle("on");
+
+    if(trafficBtn.classList.contains("on")) {
+        trafficBtn.innerText = trafficBtn.innerText.replace("View", trafficBtn.getAttribute("href"));
+        trafficBtn.setAttribute("href", "View");
+        map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+    } else {
+        trafficBtn.innerText = trafficBtn.innerText.replace("Hide", trafficBtn.getAttribute("href"));
+        trafficBtn.setAttribute("href", "Hide");
+        map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+    }
 });

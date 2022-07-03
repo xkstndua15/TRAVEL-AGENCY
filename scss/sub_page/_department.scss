@@ -1,31 +1,35 @@
 .department {
     .wrap {
         width: 100%;
+        padding: 80px 50px 0px;
+        background: #fff;
+        border-radius: 10px;
 
         article {
-            width: calc(100%/3); height: 380px;
-            float: left;
+            width: calc(96%/3); height: 380px;
+            float: left; margin-right: 2%;
             position: relative;
-            margin-bottom: 60px;
+            margin-bottom: 80px;
             transition: 0.5s;
-            background: #fff;
-            border-right: 1px solid #eee;
+            border-bottom: 1px solid orangered;
+            background: #eee;
 
             // 255, 69, 0
-            &:nth-of-type(3n) {border-right: none;}
+            &:nth-of-type(3n) {border-right: none; margin-right: 0px;}
             &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(5) {margin-bottom: 0px;}
             &:hover {
                 background: rgba(0, 0, 0, 0.5);
-                .memberImg {filter: brightness(20%);}
-                h2 {color: #000;}
-                a{opacity: 1;}
+                .memberImg {filter: brightness(10%);}
+                h2 {color: #eee;}
+                a {opacity: 1;}
+                p {color: #eee;}
             }
 
             .memberImg {
-                width: 250px; height: 250px; margin: -30px auto 0px;
+                width: 250px; height: 250px; margin: -50px auto 0px;
                 overflow: hidden; transition: 0.5s;
                 
-                border: 15px solid orangered;
+                border-radius: 50%;
 
                 filter: brightness(90%);
 
@@ -40,14 +44,14 @@
                 transition: 0.5s;
             }
             p {
-                font: 20px/1 'open sans'; color: orangered;
+                font: 20px/1 'open sans'; color: #555;
                 text-align: center; margin-top: 30px;
             }
             a {
                 display: block; width: 100%; height: 100%;
                 background: transparent; text-align: center;
                 font: bold 50px/400px 'roboto'; color: orangered;
-                position: absolute; top: 50%; left: 50%;
+                position: absolute; top: 40%; left: 50%;
                 transform: translate(-50%, -50%);
                 transition: 0.5s; opacity: 0;
             }
