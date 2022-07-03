@@ -1,47 +1,16 @@
 const key = "b74012b5c1b79c7c3bc8c8e61f3b23f0";
 const base = "https://www.flickr.com/services/rest/?";
 const method = "flickr.photos.search";
-const per_page = 20;
+const per_page = 10;
 const format = "json";
-const url = `${base}method=${method}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=Travel&privacy_filter=1`;
+const url = `${base}method=${method}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=castle&privacy_filter=1`;
 
 const gallery = document.querySelector(".gallery");
 const frame = gallery.querySelector("#list");
 const loading = gallery.querySelector(".loading");
-const input = gallery.querySelector("#search");
-const btn = gallery.querySelector(".searchBtn");
 const close = gallery.querySelector("aside .closeBtn");
 
 callData(url);
-
-btn.addEventListener("click", () => {
-    let tag = input.value.trim();
-
-    const urlF = `${base}method=${method}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
-    // createList(urlF); => callData(urlF);
-
-    if(tag != "") {
-        callData(urlF);
-    } else {
-        alert("Enter Keyword.");
-        input.value = "";
-    }
-});
-
-input.addEventListener("keypress",(e)=>{
-    if(e.keyCode == 13){
-        let tag = input.value.trim();
-
-        const urlF = `${base}method=${method}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
-
-        if(tag != "") {
-            callData(urlF);
-        } else {
-            alert("Enter Keyword.");
-            input.value = "";
-        }
-    }
-});
 
 frame.addEventListener("click", (e) => {
     e.preventDefault();
@@ -91,6 +60,7 @@ function callData(url){
     })
     .then(json=>{
         let items = json.photos.photo;
+        console.log(json);
 
         if(items.length > 0){
            createList(items);
@@ -110,15 +80,34 @@ function createList(items) {
 
        let imgSrcBig = `https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_b.jpg`;
 
+       let titleLen = data.title.indexOf(" ");
+       let title = data.title
+       if(titleLen == -1) {
+            title = data.title;
+       } else {
+            title = data.title.substr(0, titleLen);
+       }
+
+       if(titleLen < data.title.length && titleLen > -1) {
+            titleLen = data.title.indexOf(" ", titleLen + 1);
+
+            if(titleLen == -1) {
+                title = data.title;
+            } else {
+                title = data.title.substr(0, titleLen);
+            }
+       }
+
        htmls +=`
             <li class="item">
                 <div>
                     <a href="${imgSrcBig}">
                         <img src="${imgSrc}" alt="">
+                        <h2>TITLE</h2>
+                        <h3>${title}</h3>
+                        <h2>OWNER</h2>
+                        <p>${data.owner}</p>
                     </a>
-                    <p>${data.title}</p>
-                    
-
                 </div>
             </li>
        `;
