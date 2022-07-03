@@ -10,71 +10,67 @@
             padding: 50px;
             border-radius: 10px;
 
-            ul {
-                li {
-                    float: left; width: 50%;
+            .joinInfo {
+                display: flex;
+                flex-direction: column;
+                .image {
+                    width: 300px; height: 300px;
+                    margin: 30px auto 0px;
 
-                    &:last-of-type {border-right: none;}
-                    .joinInfo {
-                        display: flex;
-                        flex-direction: column;
-                        .image {
-                            width: 300px; height: 300px;
-                            margin: 30px auto 0px;
+                    img {
+                        width: 100%; height: 100%; object-fit: cover;
+                    }
+                }
+                h2 {
+                    font: bold 100px/1 'roboto'; color: #aaa;
+                    margin-left: 120px;
+                }
+            }
+            fieldset{border: none;}
+            table {
+                margin: 0px auto;
+                border-top: none;
+                border-bottom: none;
 
-                            img {
-                                width: 100%; height: 100%; object-fit: cover;
-                            }
-                        }
-                        h2 {
-                            font: bold 100px/1 'roboto'; color: orangered;
-                            margin-left: 120px;
+                th, td {border-bottom: 1px solid #aaa; padding: 15px 25px;}
+                th {
+                    width: 20%;
+
+                    input[type=reset], input[type=submit] {
+                        width: 30%; height: 40px;
+                        border: 1px solid #aaa; margin: 10px 45px;
+                        font: bold 14px/40px 'open sans'; color: #eee; letter-spacing: 2px;
+                        cursor: pointer; transition: 0.5s;
+                        background: #555;
+
+                        &:hover {
+                            background: orangered; color: #fff;
                         }
                     }
-                    fieldset{border: none;}
-                    table {
-                        margin: 0px auto;
-                        border-top: none;
-                        border-bottom: none;
+                }
+                td {
+                    border-left: 1px solid #aaa;
 
-                        th, td {border-bottom: 1px solid #ddd; padding: 15px 25px;}
-                        th {
-                            width: 20%;
-
-                            input[type=reset], input[type=submit] {
-                                width: 30%; height: 40px;
-                                border: 1px solid #aaa; margin: 10px 45px;
-                                font: bold 14px/40px 'open sans'; color: #555; letter-spacing: 2px;
-                                cursor: pointer; transition: 0.5s;
-
-                                &:hover {
-                                    background: orangered; color: #fff;
-                                }
-                            }
-                        }
-                        td {
-                            border-left: 1px solid #aaa;
-
-                            input[type=text], input[type=password], select {
-                                width: 60%; background: rgba(0, 0, 0, 0.03);
-                                padding: 10px;
-                                border: 1px solid #aaa;
-                            }
-                            input[type=radio], input[type=checkbox] {
-                                margin-right: 10px;
-                            }
-                            textarea {
-                                resize: none;
-                                width: 60%; height: 50px;
-                                background: rgba(0, 0, 0, 0.03);
-                                padding: 10px;
-                                border: 1px solid #aaa;
-                            }
-                            p {
-                                font: 13px/1 'open sans';
-                                color: orangered; margin-top: 5px;
-                            }
-                        }
+                    input[type=text], input[type=password], select {
+                        width: 60%; background: rgba(0, 0, 0, 0.03);
+                        padding: 10px;
+                        border: 1px solid #eee;
+                        border-radius: 5px;
+                    }
+                    input[type=radio], input[type=checkbox] {
+                        margin-right: 30px;
+                    }
+                    textarea {
+                        resize: none;
+                        width: 60%; height: 50px;
+                        background: rgba(0, 0, 0, 0.03);
+                        padding: 10px;
+                        border: 1px solid #aaa;
+                        border-radius: 5px;
+                    }
+                    p {
+                        font: 13px/1 'open sans';
+                        color: orangered; margin-top: 5px;
                     }
                 }
             }
