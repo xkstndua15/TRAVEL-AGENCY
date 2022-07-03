@@ -348,11 +348,13 @@ body {
                     a {
                         position: absolute; top: 50%; left: 50%;
                         transform: translate(-50%, -50%);
-                        border: 2px solid orangered;
+                        border: 2px solid #aaa;
+                        background: #555;
 
                         &:hover {
-                            color: #333;
-                            background: #fff;
+                            color: #111;
+                            background: orangered;
+                            border: 2px solid orangered;
                         }
                     }
                 }

@@ -561,7 +561,7 @@ a {
   position: relative;
   margin-bottom: 80px;
   transition: 0.5s;
-  border-bottom: 1px solid orangered;
+  border-bottom: 1px solid #ddd;
   background: #eee;
 }
 .department .wrap article:nth-of-type(3n) {
@@ -978,83 +978,79 @@ figure.pop .closeBtn {
   padding: 50px;
   border-radius: 10px;
 }
-.join .inner .wrap ul li {
-  float: left;
-  width: 50%;
-}
-.join .inner .wrap ul li:last-of-type {
-  border-right: none;
-}
-.join .inner .wrap ul li .joinInfo {
+.join .inner .wrap .joinInfo {
   display: flex;
   flex-direction: column;
 }
-.join .inner .wrap ul li .joinInfo .image {
+.join .inner .wrap .joinInfo .image {
   width: 300px;
   height: 300px;
   margin: 30px auto 0px;
 }
-.join .inner .wrap ul li .joinInfo .image img {
+.join .inner .wrap .joinInfo .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.join .inner .wrap ul li .joinInfo h2 {
+.join .inner .wrap .joinInfo h2 {
   font: bold 100px/1 "roboto";
-  color: orangered;
+  color: #aaa;
   margin-left: 120px;
 }
-.join .inner .wrap ul li fieldset {
+.join .inner .wrap fieldset {
   border: none;
 }
-.join .inner .wrap ul li table {
+.join .inner .wrap table {
   margin: 0px auto;
   border-top: none;
   border-bottom: none;
 }
-.join .inner .wrap ul li table th, .join .inner .wrap ul li table td {
-  border-bottom: 1px solid #ddd;
+.join .inner .wrap table th, .join .inner .wrap table td {
+  border-bottom: 1px solid #aaa;
   padding: 15px 25px;
 }
-.join .inner .wrap ul li table th {
+.join .inner .wrap table th {
   width: 20%;
 }
-.join .inner .wrap ul li table th input[type=reset], .join .inner .wrap ul li table th input[type=submit] {
+.join .inner .wrap table th input[type=reset], .join .inner .wrap table th input[type=submit] {
   width: 30%;
   height: 40px;
   border: 1px solid #aaa;
   margin: 10px 45px;
   font: bold 14px/40px "open sans";
-  color: #555;
+  color: #eee;
   letter-spacing: 2px;
   cursor: pointer;
   transition: 0.5s;
+  background: #555;
 }
-.join .inner .wrap ul li table th input[type=reset]:hover, .join .inner .wrap ul li table th input[type=submit]:hover {
+.join .inner .wrap table th input[type=reset]:hover, .join .inner .wrap table th input[type=submit]:hover {
   background: orangered;
   color: #fff;
 }
-.join .inner .wrap ul li table td {
+.join .inner .wrap table td {
   border-left: 1px solid #aaa;
 }
-.join .inner .wrap ul li table td input[type=text], .join .inner .wrap ul li table td input[type=password], .join .inner .wrap ul li table td select {
+.join .inner .wrap table td input[type=text], .join .inner .wrap table td input[type=password], .join .inner .wrap table td select {
   width: 60%;
   background: rgba(0, 0, 0, 0.03);
   padding: 10px;
-  border: 1px solid #aaa;
+  border: 1px solid #eee;
+  border-radius: 5px;
 }
-.join .inner .wrap ul li table td input[type=radio], .join .inner .wrap ul li table td input[type=checkbox] {
-  margin-right: 10px;
+.join .inner .wrap table td input[type=radio], .join .inner .wrap table td input[type=checkbox] {
+  margin-right: 30px;
 }
-.join .inner .wrap ul li table td textarea {
+.join .inner .wrap table td textarea {
   resize: none;
   width: 60%;
   height: 50px;
   background: rgba(0, 0, 0, 0.03);
   padding: 10px;
   border: 1px solid #aaa;
+  border-radius: 5px;
 }
-.join .inner .wrap ul li table td p {
+.join .inner .wrap table td p {
   font: 13px/1 "open sans";
   color: orangered;
   margin-top: 5px;
@@ -1073,36 +1069,28 @@ figure.pop .closeBtn {
   border-radius: 10px;
   padding: 50px;
 }
-.login .inner .wrap > ul {
-  width: 100%;
+.login .inner .wrap > h2 {
+  font: 20px/1 "open sans";
+  text-align: center;
 }
-.login .inner .wrap > ul > li {
-  width: 50%;
-  height: 500px;
-  float: left;
-  border-right: 1px solid #eee;
+.login .inner .wrap > h2 > a {
+  font: 20px/1 "open sans";
+  color: skyblue;
+  text-decoration: underline;
 }
-.login .inner .wrap > ul > li:last-of-type {
+.login .inner .wrap > h2 > a:hover {
+  color: lightblue;
+}
+.login .inner .wrap:last-of-type {
   border-right: none;
 }
-.login .inner .wrap > ul > li .loginInfo {
-  display: flex;
-  flex-direction: column;
+.login .inner .wrap > ul > li {
+  float: left;
+  width: 49%;
+  margin-right: 2%;
 }
-.login .inner .wrap > ul > li .loginInfo .image {
-  width: 300px;
-  height: 300px;
-  margin: 30px auto 0px;
-}
-.login .inner .wrap > ul > li .loginInfo .image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.login .inner .wrap > ul > li .loginInfo h2 {
-  font: bold 100px/1 "roboto";
-  color: orangered;
-  text-align: center;
+.login .inner .wrap > ul > li:last-of-type {
+  margin-right: 0%;
 }
 .login .inner .wrap > ul > li .loginBox .inputBox {
   display: flex;
@@ -1128,12 +1116,12 @@ figure.pop .closeBtn {
 .login .inner .wrap > ul > li .loginBox > ul {
   width: 100%;
 }
-.login .inner .wrap > ul > li .loginBox > ul li {
+.login .inner .wrap > ul > li .loginBox > ul > li {
   float: left;
   margin-top: 100px;
   margin-left: 60px;
 }
-.login .inner .wrap > ul > li .loginBox > ul li a {
+.login .inner .wrap > ul > li .loginBox > ul > li a {
   display: block;
   text-align: center;
   width: 200px;
@@ -1144,9 +1132,32 @@ figure.pop .closeBtn {
   border-radius: 10px;
   transition: 0.5s;
 }
-.login .inner .wrap > ul > li .loginBox > ul li a:hover {
+.login .inner .wrap > ul > li .loginBox > ul > li a:hover {
   background: #333;
   color: orangered;
+}
+.login .inner .wrap > ul > li .visualBox {
+  height: 480px;
+  position: relative;
+}
+.login .inner .wrap > ul > li .visualBox h2 a {
+  width: 100%;
+  font: bold 45px/1 "open sans";
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.login .inner .wrap > ul > li .visualBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  left: 10px;
 }
 
 @keyframes rotate {
@@ -1630,11 +1641,13 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 2px solid orangered;
+  border: 2px solid #aaa;
+  background: #555;
 }
 #visual .inner .sitemap ul li a:hover {
-  color: #333;
-  background: #fff;
+  color: #111;
+  background: orangered;
+  border: 2px solid orangered;
 }
 #visual .inner .sitemap .closeBtn {
   width: 40px;
